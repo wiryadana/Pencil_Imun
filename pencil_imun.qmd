@@ -8,6 +8,7 @@ editor: visual
 ## Rasio Eosinofil per Limfosit dan Rasio Basofil per Limfosit pada reaksi anafilaksis
 
 ## Library
+
 ```{r}
 #| message: false
 #| warning: false
@@ -15,32 +16,35 @@ library(tidyverse)
 library(googlesheets4)
 library(skimr)
 library(gtsummary)
+library(skimr)
 ```
 
 ## Import Data
 
 ```{r}
-data_awal <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/11i1_hS6h00tasrYxlCTuPvGgTHqWb9de-eD8HLjLcQI/edit?gid=1161695245#gid=1161695245", sheet = 1)
+data_awal <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/11i1_hS6h00tasrYxlCTuPvGgTHqWb9de-eD8HLjLcQI/edit?gid=11410341#gid=11410341", sheet = 1)
 ```
 
 ### Seleksi Data
+
 ```{r}
 data_clean <- data_awal %>%
   filter(inc_exc == "Include") %>%
-  mutate(across(17:26, as.numeric)) %>%
+  mutate(across(19:26, as.numeric)) %>%
   mutate(Gender = as.factor(Gender)) %>%
   mutate(MR = as.character(MR)) %>%
-  mutate(Onset_jam = as.numeric(Onset_jam))
+  mutate(Onset_jam = as.numeric(Onset_jam)) %>%
+  mutate(Usia = as.numeric(Usia))
   
 
 glimpse(data_clean)
 ```
 
 ### Descritive Statistics
+
 ```{r}
 skim(data_clean)
 
 ## TBL Summary without No, Nama, MR, skin and IgE
-data_clean[, -c(1,2,5,13,27)] %>% tbl_summary
+data_clean[, -c(1,2,3,6,7)] %>% tbl_summary
 ```
-
