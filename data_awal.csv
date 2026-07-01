@@ -1,0 +1,414 @@
+No,No_awal,Nama,Usia,Gender,MR,inc_exc,Diagnosis,Inducer,Grp_inducer,Komorbid,RF,Infection,Onset_jam,Alergy_Dx,Skin,GIT,Pulmo,Cardiovascular,WBC,Ne,Ly,Mo,Eo,Ba,HGB,HCT,PLT,MPV,IgE
+NA,1,KOMANG SANTI VIRGIANI,21,P,24026286,Exclude,obs syok anaphilaksis ec susp produk darah (TC Apheresis) (membaik),Blood_Product,NA,susp ALL,tidak ada,tidak ada,0.25,NA,Gatal,tidak,tidak,shock,36.48,0.98,26.24,0.03,9.22,0.01,NA,NA,NA,NA,NA
+NA,2,IDA BAGUS OKA SENA,75,L,22043561,Exclude,Reaksi anafilaksis ec susp contrast induced dd drug induced,Contrast,NA,Adenocarcinoma paru,DM,NA,No,NA,12,"Bengkak mata, wajah tangan, ruam kemerahan dada",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+1,3,NI MADE DARMAWATI,51,P,01558680,Include,"Suspek Drug-Induced Pemphigus dd/ Drug-Induced Bullous Pemphigoid et kausa suspek Cephalosporin (Ceftazidim, Ceftriaxone) Levofloksasin, Furosemid, Allopurinol dd/ Pemfigus Paraneoplastik dd/ Suspek Bullous Systemic Lupus Eritematosus ( membaik )",sefalosporin,Drugs,tidak ada,Ca cervix,SSTI,24.00,Reaksi_hipersensitivitas,pemfigus,tidak ada,tidak ada,tidak ada,34.56,32.80,0.54,0.18,0.96,0.08,6.70,20.20,57.00,11.30,NA
+2,4,GEDE ARTANA,31,L,22042447,Include,food_nonspesific,ibuprofen,Drugs,tidak ada,tidak ada,tidak ada,1.00,Reaksi_anafilaksis,"Mata bengkak, kulit kemerahan",tidak ada,wheezing,tidak ada,6.41,4.39,1.46,0.08,0.47,0.01,15.80,47.30,186.00,10.80,NA
+3,5,AJENG ISTYORINI ASMONING DEWAN,31,P,24041414,Include,Syok anafilaksis ec susp drug induced (loperamide) (membaik),loperamid,Drugs,tidak ada,other alergy,tidak ada,0.50,Syok_anafilaksis,urtikaria,tidak ada,tidak ada,shock,4.13,2.44,1.29,0.01,0.39,0.01,13.80,42.00,287.00,10.70,NA
+NA,6,NI WAYAN SRI PURNIASIH,21,P,24028987,Exclude,Reaksi hipersensivitas ec susp Drug (OAT),Drug,NA,NA,NA,B24 + TBC,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,7,I KOMANG SUMANADI,55,L,24014891,Exclude,Riwayat Reaksi hipersensitivitas ec susp drug induced (Rituximab),Drug,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,8,DESAK NYOMAN SRIASTITI,50,P,23073580,Exclude,Reaksi hipersensitivitas akut ec susp produk darah (PRC),Blood_Product,NA,CKD stage V on HD,NA,NA,CRBSI,NA,0.5,gatal dan urtikaria,tidak ada,tidak ada,tidak ada,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+4,9,RUMANI,53,P,24040798,Include,Reaksi anafilaksis derajat berat ec susp food (udang),udang,Food,asma eksaserbasi akut,tidak ada,tidak ada,2.00,Reaksi_anafilaksis,tidak ada,Vomiting,Dyspnea,tidak ada,14.25,5.75,7.23,0.21,1.00,0.06,14.50,44.80,459.00,8.60,NA
+NA,10,DEWA AYU MADE SARIANI,55,P,01610605,Exclude,"Reaksi hipersensitivitas ec Susp Kemoterapi Induced ? (Rituximab, Siklofosfamid, Doxorubicin, Vincristine)",Drug,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+5,11,UUS SARIPUDIN,58,L,24039357,Include,Reaksi Anafilaksis ec susp drug (Metronidazole dd/ Ceftriaxone) dd/ food (telur) (membaik),sefalosporin,Drugs,abses retrofaring,DM,tidak ada,0.50,Reaksi_anafilaksis,bercak kemerahan,tidak ada,dispnea,tidak ada,17.45,14.38,1.45,0.09,1.48,0.05,15.50,46.20,346.00,8.80,NA
+NA,12,NI LUH PUTU YUNIANTARI,34,P,17020388,Exclude,Reaksi Anafilaksis ec Produk Darah,Blood_Product,Blood,Anemia Aplastik,SLE,tidak ada,0.50,NA,gatal,Vomiting,tidak ada,tidak ada,5.85,4.96,0.81,0.01,0.08,0.01,5.80,17.00,65.00,9.60,NA
+6,13,I NYOMAN GEDE BUDIASA,56,L,21052109,Include,Riw. reaksi hipersensitivitas akut ec susp contrast agent (IOPROMID) (ULTRAVIST),Contrast,Drugs,STEMI,HIV,tidak ada,1.00,Reaksi_hipersensitivitas,"Gatal, ruam, bengkak mata",tidak ada,tidak ada,tidak ada,6.37,2.61,1.10,0.19,0.48,0.03,13.40,38.80,188.00,8.60,NA
+7,14,I GEDE DIMAS KRESNA NINGGRAT,21,L,23003159,Include,Syok ec susp anafilaksis ec susp drug (penisilin),penisilin,Drugs,CHF,ARF,tidak ada,4.00,Syok_anafilaksis,"Ruam, gatal",tidak ada,tidak ada,tidak ada,14.15,12.73,1.16,0.02,0.23,0.01,14.50,44.10,279.00,9.70,NA
+8,15,LILI SUTIASIH,82,P,24037859,Include,Syok ec susp septik dd anafilaktik dd hipovolemik,sefalosporin,Drugs,CAP,CHF,CAP,0.25,Syok_anafilaksis,tidak ada,tidak ada,sesak,Shock,35.15,1.62,15.15,0.01,18.31,0.07,7.90,24.30,137.00,11.10,NA
+NA,16,TUKINI,65,P,23057868,Exclude,Reaksi hipersensitivitas ec OAT,Drug,NA,TBC,HIV,NA,NA,NA,gatal,tidak ada,tidak ada,tidak ada,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,17,RINI SUMARTI HANDAYANI,45,P,24022389,Exclude,Reaksi hipersensitivitas ec drug (OAT dd kotrimoksasol),Drug,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+9,18,NI WAYAN EVI PARIANTI,28,P,24037482,Include,Reaksi anafilaksis ec susp drug induce (Ceftraxone),sefalosporin,Drugs,CAP,tidak ada,CAP,1.00,Reaksi_anafilaksis,gatal,dispnea,tidak ada,tidak ada,12.99,9.34,1.83,0.20,0.04,0.02,12.80,36.70,466.00,8.70,NA
+NA,19,Ni Made Candri,74,P,24021504,Exclude,Susp reaksi hipersensitivitas ec suspect drug induced alergi (Deferasirox),Drug,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+10,20,TRIVERA NING LARASATY,36,P,22040220,Include,Reaksi hipersensitivitas ec susp obat (Piroxicam dd Metampiron dd amoxicilin),piroksikam,Drugs,ankle sprain,tidak ada,tidak ada,24.00,Reaksi_hipersensitivitas,Eritem makulopapular,tidak ada,tidak ada,tidak ada,12.92,7.60,3.00,1.14,1.08,0.03,12.00,36.70,421.00,9.50,NA
+NA,21,I MADE NGURAH VIJANTARA,27,L,20015523,Exclude,Syok Anafilaksis ec susp. produk darah (PRC),Drug,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+11,22,DESIYANTI BULU,30,P,24035275,Include,Reaksi anafilaktik ec susp drug induced,parasetamol,Drugs,ISPA,"Alergi obat: ibuprofen, mefinal, salbutamol",ISPA,1.00,Reaksi_anafilaksis,"urtika, edema palpebra",nausea,wheezing,tidak ada,10.07,5.21,3.05,0.71,1.07,0.03,13.80,40.80,354.00,8.00,NA
+12,23,NI KETUT KARIANI SRI DAGING ANGGINI,20,P,24035594,Include,Reaksi anafilaktik ec susp food (curiga seafood),Seafood,Food,tidak ada,tidak ada,tidak ada,2,Reaksi_anafilaksis,urtika,tidak ada,"wheezing, laringeal edema",tidak  ada,10.83,6.82,3.34,0.53,0.12,0.02,14.20,43.00,316.00,8.60,NA
+13,24,NI MADE SRI WAHYUNI,29,P,24035437,Include,"Obs reaksi hipersentivitas  akut ec susp drug induced (Ibuprofen, Parasetamol)",ibuprofen,Drugs,tidak ada,alergi obat ibuprofen,Viral Infection,1,Reaksi_hipersensitivitas,urtika,tidak ada,tidak ada,tidak ada,9.94,6.23,2.59,0.69,0.39,0.04,14.00,44.00,334.00,10.00,NA
+NA,25,I GUSTI AYU SUDA,65,P,24018224,Exclude,Reaksi hipersensitivitas akut e.c produk darah (PRC),Blood_Product,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,26,DSK ALIT PUSPA BUDI WIJAYANTI,31,P,24026318,Exclude,Reaksi Hipersensitivitas ec susp drug (TLD) dd food,Drug,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+14,27,"NI MADE ADRIANA MURLIANA BIMAR Z, S.ARS",28,L,14051695,Include,Reaksi hipersensitivitas ec drug induced (ranitidin),Ranitidin,Drugs,tidak ada,tidak ada,viral infection,2,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,9.48,7.27,1.82,0.37,0.01,0.01,14.00,42.50,373.00,9.80,NA
+15,28,Karoni Ni Luh,53,P,01088641,Include,Syok Anafilaksis ec susp drug induced (susp cefazolin dd/ analgetik?) dd/ food (membaik),sefalosporin,Drugs,DM,tidak ada,tidak ada,0.5,Syok_anafilaksis,urtikaria,tidak ada,wheezing,tidak ada,19.52,16.81,1.76,0.89,0.04,0.02,11.70,36.40,212.00,11.10,NA
+16,29,Nur Hamid,33,P,24032366,Include,Obs urtikaria akut ec susp tungau debu dd suhu dingin,Debu,Others,"HT, ACKD",tidak ada,Selulitis Cruris,2.00,Reaksi_hipersensitivitas,urtika,tidak ada,tidak ada,tidak ada,40.27,36.83,1.92,1.32,0.02,0.18,9.00,27.30,400.00,10.60,NA
+17,30,DIDIK PRIYODARSONO,61,L,01578241,Include,Reaksi anafilaktik akut ec susp makanan,Seafood,Food,"Adenocarcinoma Paru, pathological fracture","alergi obat: Torasic, pelatin, Ceftriaxon, aspirin, buscopan, metampiron, seafood",tidak ada,2.00,Reaksi_anafilaksis,urtika,tidak ada,tidak ada,tidak ada,14.84,12.90,0.98,0.76,0.17,0.03,11.10,35.40,155.00,10.70,NA
+18,31,BUDI GUNAWAN,47,L,21034162,Include,Reaksi hipersensitivitas akut ec suspect drug (kapsul dan jamu pegel linu),drug_nonspecific,Drugs,tidak ada,Alergi obat: Obat Ketorolac dan Ibuprofen,tidak ada,1.00,Reaksi_hipersensitivitas,urtika,tidak ada,tidak ada,tidak ada,7.57,5.98,0.94,0.46,0.14,0.05,14.60,43.3,254.00,9.40,NA
+19,32,I WAYAN SUDANA,64,L,22057911,Include,Reaksi hipersensitivitas akut ec susp Drug induced (Seftriakson),sefalosporin,Drugs,CKD Stage V,Tidak ada,CRBSI,1,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,8.12,6.98,0.67,0.34,0.12,0.01,9.10,27.30,94.00,10.20,NA
+20,33,NI KADEK ERAWATI,47,P,14060428,Include,Reaksi hipersensitivitas ec susp drug (parasetamol),parasetamol,Drugs,HHD,Alergi makanan laut,Susp Thyphoid Fever,6,Reaksi_hipersensitivitas,urtika,tidak ada,tidak ada,palpitasi,8.14,6.38,1.22,0.35,0.17,0.02,12.10,37.40,262.00,9.20,NA
+NA,34,RAHMAN LATIF,29,L,24027561,Exclude,Reaksi hipersensitivitas akut e.c susp drug (cotrimoxaole),Drug,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,35,NI MADE TRI ADRIANI,54,P,17042716,Exclude,"Alergi Parasetamol, Ibuprofen, asam mefenamat",Drug,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+21,36,SUGENG SIANTO,59,L,16040663,Include,Reaksi hipersensitivitas akut ec susp obat (Ibuprofen dd/ Paracetamol),ibuprofen,Drugs,PPOK stabil,tidak ada,tidak ada,1,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,8.96,6.55,1.72,0.40,0.08,0.20,14.30,42.50,186.00,9.70,NA
+22,37,BIMA SATYA WIRAWAN,29,L,21001442,Include,Syok anafilaksis (membaik) hari 2 ec susp Metamizole ,metamizole,Drugs,tidak ada,tidak ada,Dengue,2,Syok_anafilaksis,urtikaria,tidak ada,tidak ada,hipotensi,6.18,5.56,0.30,0.32,0.00,0.00,15.50,45.10,188.00,9.60,NA
+23,38,NI PUTU SISKA YUNI,29,P,24028340,Include,Reaksi anafilaksis ec susp obat (seftriakson),sefalosporin,Drugs,Kalkulus Kolesistitis,tidak ada,kolesistitis,0.16,Reaksi_hipersensitivitas,urtikaria,tidak ada,wheezing,tidak ada,16.04,12.38,2.52,0.97,0.14,0.03,11.90,36.20,394.00,9.10,NA
+NA,39,DEWA AYU PUTU OKA,81,P,24022038,Exclude,Transfusion associated dyspnea ec susp transfusion-associated circulatory overload (TACO) dd anaphylactic transfusion reaction,Drug,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,7.61,6.57,0.63,0.39,0.01,0.01,8.30,26.20,166.00,10.70,0
+24,40,GUSTI AYU DIVA SANTHI,21,P,17046811,Include,Syok anafilaksis ec susp insect bite (membaik),insect_bite,Others,tidak ada,tidak ada,tidak ada,0.25,Syok_anafilaksis,urtikaria,tidak ada,tidak ada,tidak ada,15.94,8.32,6.65,0.76,0.14,0.07,14.50,43.40,370.00,9.60,NA
+25,41,NS. I PUTU GEDE MAS SURYANEGAR,37,L,00804391,Include,Reaksi anafilaksis ec susp makanan,food_nonspecific,Food,tidak ada,alergi seafood,tidak ada,0.50,Reaksi_anafilaksis,"urtikaria, edema oris dan palebra",kolik abdomen,wheezing,tidak ada,14.10,12.50,1.44,0.11,0.02,0.03,15.50,47.50,301.00,8.10,NA
+26,42,DRS. I GUSTI PUTU SUDIANA,62,L,24026169,Include,Reaksi hipersensitivitas akut ec susp food dd obat?,food_nonspecific,Food,"Sepsis, DM tipe 2, DMDF",tidak ada,DMDF,4.00,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,28.19,26.50,0.56,0.78,0.29,0.06,8.20,24.10,589.00,9.10,NA
+NA,43,I MADE KERISTANAMA,29,L,22059555,Exclude,Reaksi hipersensitivitas akut ec susp obat (parasetamol),Drug,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,44,I NYOMAN SUDIARTA,59,L,24022665,Exclude,"Obs Reaksi Hipersensitivitas Akut ec Suspek Drug Induced (Kotrimoksasol, Flukonazol)",Drug,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+27,45,I KADEK NGURAH ARTA WIJAYA,21,L,24025701,Include,Susp Hereditary Angioedema dd Viral Induced Urticaria,food_nonspecific,Food,Dengue,tidak ada,dengie,4,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,6.79,5.32,0.88,0.59,0.00,0.00,14.40,41.40,194.00,9.80,NA
+NA,46,SRI SUHARTINI,58,P,20008389,Exclude,Reaksi hipersensitivitas ec susp produk darah (PRC),Blood_Product,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+28,47,KOMANG DARMIANTI,38,P,01543628,Include,Reaksi Hipersensitivitas akut  ec susp  suhu (dingin) dd food,suhu,Others,hipokalemia,alergi dingin,tidak ada,4.00,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,13.76,10.32,3.02,0.33,0.06,0.03,14.50,45.80,341.00,10.10,NA
+29,48,NI LUH SRI WIYANI,41,P,24025108,Include,Reaksi anafilaksis ec susp makanan dd suhu (dingin),suhu,Others,tidak ada,suhu dingin,tidak ada,3.00,Reaksi_anafilaksis,urtikaria,tidak ada,tidak ada,tidak ada,17.41,16.24,0.93,0.21,0.01,0.03,12.80,37.90,218.00,10.10,NA
+30,49,Surya,28,L,24024803,Include,Reaksi hipersensitivitas Acute H2 ec susp obat (parasetamol) dd suhu dd food,parasetamol,Drugs,Acute febrile illness,Alergi NSAID,Virus,0.20,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,7.42,5.64,0.91,0.85,0.01,0.01,15.00,43.00,268.00,10.40,NA
+31,50,NI NYOMAN SUKERNI,53,P,01135786,Include,Reaksi Hipersensitivitas Akut ec Omeprazole + Ondansentron,omeprazole,Drugs,hipertensi,multipel drug alergy,tidak ada,3,Reaksi_hipersensitivitas,urtikaria,dyspepsia,tidak ada,tidak ada,5.63,2.96,1.93,0.36,0.35,0.03,13.50,41.10,290.00,8.90,NA
+NA,51,ALYA ISLAM NURAINI IBNU ABBAS,20,L,24014887,Exclude,reaksi hipersensitivitas ec susp OAT,Drug,Drugs,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,52,I PUTU SUTA ATMAJA,48,L,24024370,Exclude,Susp vasculitis primer dd sekunder,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+32,53,I WAYAN SUDARTA,39,L,24024337,Include,Reaksi Hipersensitivitas Akut ec Susp Insect Bite,insect_bite,Others,tidak ada,tidak ada,tidak ada,1.50,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,6.36,3.34,2.49,0.41,0.10,0.02,16.10,48.70,251.00,9.40,> 1000.00
+33,54,IKLIMA PUJIANTI,26,P,16044489,Include,Reaksi Anafilaktik ec susp obat,ibuprofen,Drugs,Acute febrile illness,alergi antinyeri,ada,1.00,Reaksi_anafilaksis,maculapapula,tidak ada,tidak ada,tidak ada,11.43,8.95,2.05,0.39,0.04,0.00,13.20,37.60,192.00,10.30,NA
+34,55,NI NYOMAN MARNI,75,P,21014318,Include,Reaksi Hipersensitivitas akut ec susp Drug induced (Seftriakson),sefalosporin,Drugs,ADHF,tidak ada,ISK,0.5,Reaksi_hipersensitivitas,priuritus,tidak ada,tidak ada,tidakd ada,9.48,6.56,2.13,0.44,0.30,0.05,11.90,37.10,244.00,11.10,NA
+35,56,GST KADE RESTU Z WIDYANATA,22,L,00958642,Include,Reaksi anafilaktik ec susp food (lawar lebah),lawar_lebah,Food,Asma intermitent,Asma intermitent,tidak ada,1.00,Reaksi_anafilaksis,urtikaria,nauusea vomiting,wheezing,tidak ada,16.11,11.69,3.33,0.99,0.07,0.03,18.30,53.30,336.00,9.50,NA
+36,57,MARDIANA TARIGAN,63,P,24022561,Include,Obs syok anaphylaksis H2 ec susp drug induced (cefadroxil dd demacolin dd ambroxol) dd food,sefalosporin,Drugs,DM,tidak ada,ISPA,1,Syok_anafilaksis,urtikaria,tidak ada,wheezing,hipotensi,7.49,2.36,4.81,0.25,0.06,0.01,12.70,38.30,298.00,10.10,NA
+37,58,APRIYONO,42,L,24003076,Include,"Reaksi hipersensitivitas akut ec susp obat (asetosal, ticagrelol, ramipril, candesartan, bisoprolol, atorvastatin, lansoprazole)",aspirin,Drugs,NSTEMI,multipel drug allergy,tidak ada,2,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,16.11,13.72,1.57,0.79,0.00,0.03,15.60,46.30,371.00,9.00,NA
+NA,59,NI NYOMAN YUSTIANI,61,P,24009794,Exclude,Riwayat Reaksi anafilaksis ec susp kontras induced,Contrast,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+38,60,KOMANG ARY SUDANA,25,L,24022267,Include,Reaksi hipersensitivitas akut ec susp food dd suhu,suhu,Food,acute febrile illness,"Riwayat alergi
+Ibuprofen, Asam mefenamat",Susp Dengue,4.00,Reaksi_hipersensitivitas,urtikaria,nausea vomiting,tidak ada,tidak ada,5.35,4.16,0.72,0.47,0.01,0.01,14.30,42.60,171.00,9.80,NA
+NA,61,KOMANG FADMAWATI,38,P,24004297,Exclude,Post test alergi (test provokasi / test desensitisasi) INH dengan hasil positif,Drug,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,62,MARYA ULFA,32,P,23065189,Exclude,Reaksi Hipersensitivitas ec drug induced (OAT),Drug,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,63,I KETUT MUDIANA,60,L,23057193,Exclude,rekasi hipersensitivitas ec susp lenalidomide,Drug,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,64,GUSTI MADE DHARMA,62,L,24002419,Exclude,Reaksi hipersensitivitas akut ec susp drug induced (Seftriakson dd Lenalidomide),Drug,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,65,I MADE LUNGSUR,60,L,21006551,Exclude,Reaksi hipersensitivitas akut ec produk darah (TC apharesis),Blood_Product,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,66,ANJANU HERU SUSANTO,43,L,24018859,Exclude,Reaksi Hipersensitivitas akut ec susp. produk darah dd/ food (telur),Blood_Product,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+39,67,HAIRUL HUDA,26,L,10.07,Include,"Reaksi hipersensitivitas ec obat (susp ketorolac, omeprazole, paracetamol) (membaik)",ketorolak,Drugs,tidak ada,tidak ada,ISK,0.5,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,10.07,7.52,0.97,1.41,0.11,0.06,15.10,42.00,304.00,8.90,NA
+40,68,Komang Harya Wirayoga,19,L,13020190,Include,Reaksi anafilaksis ec susp food induced,food_nonspecific,Food,tidak ada,tidak ada,tidak ada,3.00,Reaksi_anafilaksis,urtikaria,tidak ada,tidak ada,tidak ada,7.96,4.63,2.70,0.51,0.10,0.02,15.00,44.20,280.00,10.20,NA
+NA,69,NI PUTU LINANTI,24,P,24017281,Exclude,Multipel alergi obat,Drug,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,70,AULIA DWI RAHMAWATI,18,P,24008527,Exclude,Reaksi anafilaksis ec susp produk darah (TC),Blood_Product,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+41,71,I GUSTI AYU AGUNG DELLA HARYA,25,P,00508976,Include,Reaksi anafilaktik ec susp makanan (telor bebek),telur,Food,Asma,"- Salbutamol tablet reaksi bengkak
+- Asap dan debu
+- Pain killer kecuali paracetamol",tidak ada,0.20,Reaksi_anafilaksis,urtika,tidak ada,wheezing,tidak ada,8.61,3.51,4.45,0.49,0.13,0.03,12.70,39.00,375.00,9.30,NA
+NA,72,NI KADEK WIDIASIH,25,P,24018891,Exclude,Reaksi hipersensitivitas ec produk darah,Blood_Product,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+42,73,RUDOLFUS GARUT,25,L,24019136,Include,Reaksi anafilaksis ec insect bite,insect_bite,Others,tidak ada,tidak ada,tidak ada,0.20,Reaksi_anafilaksis,makula papula hiperemis,tidak ada,tidak ada,tidak ada,10.21,6.51,3.18,0.45,0.05,0.02,17.80,50.90,219.00,9.10,NA
+NA,74,NI KETUT SURYANI,49,P,21061699,Exclude,Reaksi hipersensitivitas ec susp drug induced (OAT),Drug,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,75,NI PUTU YULIANTIKA,28,P,22030150,Exclude,Reaksi hipersensitivitas ec susp produk darah (PRC),Blood_Product,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,76,NI Luh Rai,69,P,24041336,Exclude,Reaksi hipersensitivitas akut e.c. susp produk darah (PRC),Blood_Product,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,77,NI KOMANG AYU NOVITA SARI,24,P,01013257,Exclude,Reaksi alergi ec susp. Regimen SLE,Drug,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+43,78,NI WAYAN PURNAWATI,66,P,17006966,Include,Reaksi Anafilaksis  ec susp drug induce (membaik),drug_nonspecific,Drugs,Carcinoma Ovarium,Riwayat alergi Gin,tidak ada,0.5,Reaksi_anafilaksis,urtikaria,tidak ada,wheezing,tidak ada,11.36,8.74,1.66,0.64,0.28,0.04,12.00,37.80,386.00,9.60,NA
+NA,79,Suyanto,34,L,21013855,Exclude,Reaksi hipersentivitas ec susp produk darah (PRC),Blood_Product,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+44,80,I WAYAN YOUANA SUTAPA,33,L,20041773,Include,Reaksi anafilaksis ec susp drug induced (Ceftriaxone),sefalosporin,Drugs,"DM, CKD",alergi kontras,CRBSI,0.5,Reaksi_anafilaksis,urtikaria,dispepsia,laringospasme,tidak dada,10.53,8.92,0.90,0.64,0.02,0.05,11.90,36.70,221.00,9.80,NA
+NA,81,KOMANG EDI YANA SAPUTRA,23,L,19057003,Exclude,Reaksi Hipersensitivitas (ARV),Drug,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+45,82,NI KOMANG AMI PRESI SUSANTI,32,P,01552186,Include,reaksi hipersensitifitas ec obat,drug_nonspecific,Others,SLE,Autoimun,Sinusitis,2,Reaksi_hipersensitivitas,urtika,tidak ada,tidak ada,tidak ada,6.47,5.95,0.46,0.06,0.00,0.00,12.00,38.40,317.00,9.40,NA
+46,83,NI KETUT RUBIANTI,59,P,24044880,Include,Reaksi hipersensitivitas akut ec susp drug ( Ceftriaxone ),sefalosporin,Drugs,"DM, ACKD",tidak ada,DMDF,0.1,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,11.52,9.85,0.95,0.61,0.07,0.04,10.20,32.90,423.00,9.40,NA
+NA,84,KARSINI,59,P,24012351,Exclude,3. Reaksi hipersensitivitas ec susp produk darah (PRC),Blood_Product,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+47,85,GEDE BERATHA OKAYADI,18,L,24046035,Include,Reaksi anafilaksis ec susp drug induced (ceftriaxone),sefalosporin,Drugs,Typhoid,tidak ada,Typhoid Fever,2,Reaksi_anafilaksis,urtikaria,tidak ada,wheezing,tidak ada,10.72,9.25,1.15,0.31,0.00,0.01,13.10,36.80,153.00,11.40,NA
+48,86,NI MADE POLOK,79,P,19008078,Include,Stephen Johnson Syndrome,sefalosporin,Drugs,DM tipe 2,alergi penisilin,ISK,4,Reaksi_hipersensitivitas,erosi multipel,tidak ada,tidak ada,tidak ada,7.53,5.83,1.18,0.52,0.00,0.00,10.70,31.20,270.00,10.00,NA
+49,87,KETRINA BULU,29,P,10.84,Include,"Reaksi Anafilkasis akut ec susp drug induced (amoxicillin, parasetamol, beneuron, guaifenesin)",penisilin,Drugs,Gravida,alergi debu,ISPA,0.1,Reaksi_anafilaksis,urtikaria,tidak ada,tidak ada,tidak ada,10.84,8.03,1.73,0.50,0.54,0.04,13.30,40.20,293.00,10.00,NA
+50,88,WIRYAWAN,56,L,18044608,Include,Reaksi hipersensitivitas akut ec susp drug induced (cetirizine dd susp Tungau/Kutu),Tungau,Others,CAD,tidak ada,tidak ada,1.00,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,6.80,3.92,1.77,0.55,0.50,0.06,16.00,44.70,230.00,12.30,NA
+51,89,I GUSTI PUTU DEWI SETIASTUTI,46,P,23060399,Include,Syok Anafilaksis ec susp drug induced (amoxicilin dan asam mefenamat),asam_mefenamat,Drugs,Ankilosing Spondilitis,autoimin,gingivitis,0.5,Reaksi_anafilaksis,urtikaria,tidak ada,tidak ada,hipotensi,14.06,11.52,1.74,0.76,0.01,0.03,15.70,48.90,383.00,8.60,NA
+NA,90,MELYANA AGUSTIN,18,P,18047664,Exclude,Reaksi Hipersensitivitas Akut e.c. susp produk darah (FFP),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,91,AGNES ANGGRAENI SEKU,32,P,24039445,Exclude,Reaksi hipersensitivitas ec produk darah (TC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+52,92,I KETUT RUNDA,74,L,17031238,Include,Syok anafilaktik ec susp kontras,kontras,Drugs,"SVT, Aortic Dissection, AKI",tidak ada,Pneumonia,0.2,Syok_anafilaksis,urtikaria,tidak ada,tidak ada,tidak ada,13.33,9.77,2.06,1.07,0.37,0.06,11.20,33.60,300.00,8.80,NA
+53,93,I Wayan Sutama,59,L,20019810,Include,Reaksi hipersensitivitas ec susp drug induced,parasetamol,Drugs,Hiperglikemia,tidak ada,ISPA,1,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,4.69,3.86,0.72,0.10,0.00,0.01,16.10,46.80,237.00,8.50,NA
+54,94,I WAYAN SUARTA,61,L,16051355,Include,Syok anafilaksis ec susp drug induced (aspilet dd furosemid dd obat anestesi),aspirin,Drugs,"NSTEMI, ACKD",alergi obat,tidak ada,0.5,Syok_anafilaksis,urtikaria,tidak ada,wheezing,hipotensi,9.89,7.48,1.56,0.59,0.22,0.04,13.00,38.50,257.00,10.00,NA
+NA,95,LUH AYU PUTRI SAPTAYANTI,52,P,00861812,Exclude,Reaksi hipersensitvitas ec susp drug (susp sefoperazon/metronidazol/parasetamol),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+55,96,I KADEK BAGUS MAHENDRAYANA,22,L,24049613,Include,"Reaksi anafilaksis  ec susp  obat (Paracetamol, Pseudoephedrine HCl Diphenhydramine HCl, phenylephrine HCl, dan chlorpheniramine maleate)",parasetamol,Drugs,tidak ada,tidak ada,ISPA,1.5,Reaksi_anafilaksis,urtikaria,tidak ada,wheezing,tidak ada,7.60,6.42,0.67,0.48,0.02,0.01,13.80,42.70,186.00,10.10,NA
+NA,97,M.TRISNAWATI,68,P,15011157,Exclude,Syok anafilatik ec reaksi transfusi,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,98,ERMI BUDIANI,65,P,24049504,Exclude,Syok Anafilaksis ec susp contrast,kontras,Drugs,"Tumor Solid Ovarium, AKI stage I",tidak ada,tidak ada,0.5,NA,urtikaria,tidak ada,tidak ada,hipotensi,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,99,I GUSTI PUTU SUBRAYA,63,L,22000981,Exclude,Reaksi Anafilaksis ec susp produk darah (PRC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,100,ROMLAH,57,P,20040558,Exclude,Reaksi Hipersensitivitas ec produk darah,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+56,101,NGAKAN PUTU RAKA,80,L,01076308,Include,Reaksi hipersensitivitas ec susp drug dd food,sefalosporin,Drugs,"CAP, susp TB, DM",tidak ada,"CAP, susp TB",6,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,12.26,11.45,0.39,0.41,0.00,0.01,11.90,37.30,296.00,9.50,NA
+57,102,KELLY HALOHO,39,L,24047171,Include,Erupsi Obat Makulopapular et kausa Suspek Fenitoin dd/ Pirazinamid dd/ Diazepam,OAT,Drugs,"TB Paru, CKD St III B",tidak ada,TB paru,1,Reaksi_hipersensitivitas,makula hiperemis,tidak ada,tidak ada,tidak ada,3.73,2.24,0.47,0.38,0.63,0.01,7.60,22.00,293.00,9.60,NA
+58,103,NI LUH GDE PURNASTHI,64,P,24051730,Include,Reaksi hipersensitifitas,food_nonspecific,Food,HHD,tidak ada,tidak ada,1,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,7.12,6.45,0.60,0.06,0.01,0.00,12.70,23.70,223.00,10.40,NA
+59,104,I PUTU BAYU ANANTA,33,L,24052119,Include,Reaksi Hipersensitivitas  ec susp food ( udang),udang,Food,sifilis,"alergi udang, seafood",sifilis,2,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,12.09,9.45,1.72,0.79,0.09,0.04,14.00,42.80,247.00,8.80,NA
+60,105,I WAYAN SAYOGA,37,L,24004789,Include,Reaksi anafilaktik ec susp. drug (n-asetilisistein),n-asetilsistein,Drugs,Renal cell carcinoma,"alergi debu, asma",tidak ada,0.1,Reaksi_anafilaksis,urtikaria,tidak ada,wheezing,tidak ada,8.42,3.80,3.09,0.70,0.76,0.07,16.10,50.10,238.00,10.20,NA
+61,106,NENING SERLI NITTI,22,P,24017906,Include,Reaksi hipersensitivitas ec susp food (udang),udang,Food,hipokalemia,alergi udang,tidak ada,1,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,13.01,9.86,2.34,0.61,0.16,0.04,13.40,41.70,294.00,10.90,NA
+NA,107,STEPHANIE TESHALONIKA PUTRI SE,28,P,24019241,Exclude,Reaksi hipersensitivitas ec susp drug induced (kotrimoksasol),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,108,DEWA AYU KADE MULIANGGRENI,53,P,01331676,Exclude,"Reaksi hipersensitivitas ec susp  obat (Paracetamol, Ketorolak)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,109,ENDRI PRADIKA,35,P,24046360,Exclude,Reaksi hipersensitivitas ec susp OAT,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+62,110,NLPDW,23,P,21055499,Include,Reaksi anafilaksis ec susp food dd suhu,Seafood,Food,tidak ada,"Alergi Obat, makanan",tidak ada,4,Reaksi_anafilaksis,urtikaria,tidak ada,tidak  ada,hipotensi,19.41,14.90,3.32,1.12,0.04,0.03,15.90,48.50,550.00,8.70,NA
+63,111,WLA,53,L,00933836,Include,Reaksi Hipersensitivitas akut ec susp drug (asetilsistein IV),n-asetilsistein,Drugs,"NSTEMI, AKI",tidak ada,tidak ada,1,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,6.38,3.80,1.93,0.45,0.17,0.03,13.20,39.60,227.00,9.30,NA
+64,112,RNR,58,L,21060033,Include,Reaksi Hipersensivitias Akut ec Susp Drug Induced (Contrast),n-asetilsistein,Drugs,"SNH, CKD",alergi fenitoin,tidak ada,1,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,21.64,16.94,2.58,1.83,0.14,0.15,10.50,32.20,526.00,8.80,154.17
+NA,113,EP,35,L,24046360,Exclude,Riwayat hipersensitivitas ec susp OAT,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+65,114,F,57,P,24055988,Include,Syok Anafilaktik ec Drug (Ibuprofen),ibuprofen,Drugs,"DM tipe 2, Obesitas, HHD, Anemia, Charcot foot",alergi seafood,Osteomyelitis,3,Syok_anafilaksis,urtikaria,tidak ada,wheezing,hipotensi,10.82,8.12,1.77,0.66,0.23,0.04,9.90,29.90,299.00,8.80,NA
+NA,115,MT,68,P,25011157,Exclude,Reaksi hipersensitivitas akut ec susp aspilet dd cpg,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,116,IWW,34,L,X4046927,Exclude,"Steven Johnson Syndrome ec susp drug induced (Cotrimoxazole, Tenofovir, Lamivudine, dan Dolutegravir)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,117,FNL,23,L,2404916X,Exclude,reaksi Hipersensitivitas akut ec susp produk darah (TC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,118,SZ,36,P,*4047182,Exclude,Reaksi alergi ec suspek drug induced (OAT) (membaik),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,119,INL,58,L,24057668,Exclude,Reaksi Hipersensitivitas akut ec susp drug induced ( N asetylsistein ),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+66,120,BAB,19,L,24057995,Include,Reaksi hipersensitivitas akut ec susp food induced (seafood),Seafood,Food,tidak ada,seafood,tidak ada,0.3,Reaksi_hipersensitivitas,tidak ada,dispepsia,tidak ada,tidak ada,13.73,11.24,1.71,0.67,0.07,0.04,11.80,37.20,227.00,0.00,NA
+67,121,MAPIG,30,L,x1365648,Include,Reaksi Anafilaksis,ketorolak,Drugs,tidak ada,Amoksisilin,ISPA,0.50,Reaksi_anafilaksis,Urtikaria,tidak ada,wheezing,tidak ada,8.89,7.65,0.66,0.42,0.15,0.01,12.50,35.80,175.00,10.2,NA
+NA,122,IBMB,66,L,x3065755,Exclude,Reaksi hipersensitivitas akut ec susp produk darah (PRC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,123,IKAWA,35,P,15020798,Exclude,Reaksi hipersensitivitas akut ec blood product (PRC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,124,NNR,70,P,x4058576,Exclude,Reaksi anafilaksis e.c susp. Produk darah (PRC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+68,125,SK,29,P,*4059181,Include,Reaksi hipersensitivas akut H-2 ec susp food induced,udang,Food,tidak ada,Gravida,tidak ada,1.00,Reaksi_hipersensitivitas,"urtikaria, eritema",kolik,tidak ada,tidak ada,11.92,9.15,2.09,0.62,0.05,0.01,13.30,39.60,362.00,9.50,NA
+NA,126,IPAS,30,L,x4058418,Exclude,Reaksi anafilaksis ec susp Produk darah (TC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,127,NMIM,23,P,24058915,Exclude,"Multiple drug allergy (parasetamol, ibuprofen, asam mefenamat)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,128,IPHWD,21,L,24051588,Exclude,Reaksi hipersensitivitas susp ec kotrimoksazol membaik,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,129,IMS,49,L,x4042306,Exclude,Reaksi hipersensitifitas akut e.c susp drug induced (rituximab),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,130,NNA,45,P,1591582,Exclude,Riwayat reaksi alergi susp drug induced,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,131,IPHWD,21,L,x4051588,Exclude,Reaksi hipersensitivitas ec susp kotrimoksazol,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+69,132,RA,31,P,24060875,Include,Reaksi anafilaksis ec susp kontras,kontras,Drugs,CHF,"levofloksasin, debu, lateks, seafood, telur",tidak ada,0.50,Reaksi_anafilaksis,"palpebral edema, oral edema",tidak ada,tidak ada,tidak ada,11.04,6.07,3.33,0.72,0.86,0.06,11.60,33.00,283.00,9.20,NA
+NA,133,NKPY,24,P,19047376,Exclude,reaksi hipersensitivitas ec obat(ibuprofen),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,134,PKJ,22,P,x6000148,Exclude,REAKSI ANAFILATIK EC DRUG INDUCED,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,135,KARSINI,47,L,24060661,Exclude,"Reaksi Hipersensitivitas akut ec susp Drug ( FDC ) curiga etambutol, isoniazid",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,136,IMWP,24,L,x4031330,Exclude,Reaksi hipersensitivitas akut ec blood product (TC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,137,I M S,27,L,*6000212,Exclude,Reaksi hipersensitivitas akut ec susp produk darah (PRC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,138,NWK,58,P,26000361,Exclude,reaksi hipersensitivitas ec susp drug induced natrium fusidat 2%,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,139,PAS,40,L,16004174,Exclude,Reaksi anafilaksis ec susp drug induced (omeprazole),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,140,NWL,69,P,26000997,Exclude,⁠Steven Johnson Syndrome,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,141,A,28,P,24058569,Exclude,REAKSI HIPERSENSITIVITAS AKUT EC SUSP OAT (FDC + REGIMEN ESO),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,142,KARSINI,47,L,24060661,Exclude,"Reaksi Hipersensitivitas ec susp Drug ( OAT; etambutol, isoniazid, rifampicin, pirazinamide)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,143,JIHAN RACHEL,28,P,17046023,Exclude,Reaksi hipersensitivitas ec susp. kontras,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,144,AK,21,P,26001262,Exclude,"Reaksi anafilaksis susp drug induced (omeprazole, sukralfat)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+70,145,MFJ,31,L,18046999,Include,Reaksi analfiksasi ec susp makanan (ayam dan tempe ),ayam,Food,"HIV, meningitis","HIV, meningitis","HIV, meningitis",1.00,Reaksi_anafilaksis,"Urtikaria, palpebral edema",Kolik,Wheezing,Tidak ada,7.15,3.72,2.87,0.40,0.13,0.03,15.20,45.40,252.00,9.70,NA
+NA,146,D A K Y,33,NA,*7008744,Exclude,REAKSI HIPERSENSITIVITAS EC SUSP DRUG ( ANTIBIOTIK - ERYTROMYCIN ),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,147,IMS,49,L,24042306,Exclude,Reaksi hipersensitifitas akut e.c susp drug induced (rituximab),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+71,148,IGKAW,48,L,20005932,Include,⁠REAKSI ANAFILAKTIK EC SUSP TELUR/UDANG,telur,Food,tidak ada,Tidak ada,Viral infection,0.50,Reaksi_anafilaksis,"Urtikaria, palpebral edema",Kolik,wheezing,tidak ada,7.80,5.97,1.50,0.29,0.03,0.01,16.70,49.60,220.00,9.40,NA
+NA,149,NI NYOMAN TUGAS/,54,P,19011140,Exclude,Reaksi hipersensitivitas ec susp produk darah (TC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,150,MINA,45,P,26001964,Exclude,Reaksi hipersensitivitas ec susp obat (paracetamol),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,151,IM,26,P,23043553,Exclude,Reaksi hipersensitivitas ec susp drug induced (levofloksaxin),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,152,RAT,22,P,26003077,Exclude,Reaksi Anafilaksis c susp Drug Induced (Ciprofloxacin dd/ Metilprednisolon),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,153,NMS,59,P,24010945,Exclude,"REAKSI HIPERSENSITIVITAS SUSP (KLOFAZIMIN, OFLOKSASIN, MINOSIKLIN, RIFAMPICIN)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,154,IKM,61,L,*3057193,Exclude,REAKSI HIPERSENSITIVITAS EC SUSP LENALIDOMIDE + SUSP ASAM FOLAT,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,155,GUNAWAN,49,L,26001339,Exclude,Reaksi hipersensitivitas ec susp drug reaction ( sefoperazon sulbactam),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,156,Semiyati,69,P,26004214,Exclude,REAKSI ANAFILAKSIS EC SUSP DRUG INDUCED (METIMAZOL),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,157,YNWS,48,P,24006999,Exclude,Reaksi Hipersensitivitas Akut e.c. susp drug induced (Seftriakson),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,158,INM,73,L,*4015034,Exclude,REKASI HIPERSENSITIVITAS AKUT EC SUSP DRUG INDUCED ( CEFTRIAXONE DAN LEVOFLOXACIN ),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,159,NMR,64,P,26005040,Exclude,"Reaksi Anafilaksis ke H-2 et causa obat NSAID (aspilet), antikonvulsan, donepezile dd makanan ",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,160,S,72,P,x2000957,Exclude,REAKSI ANAFILAKSIS EC SUSP DRUG (PARASETAMOL),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,161,MARIA PETRACIA DAMIYANA SUMARNO,32,P,26006904,Exclude,REAKSI HIPERSENSITIVITAS EC DRUG (SEFTRIAKSON),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,162,NNS,57,P,*6007173,Exclude,"Syok anafilaksis ec susp obat (parasetamol, azitromisin, seftriakson) (membaik)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,163,IGMRA,29,L,26007543,Exclude,Reaksi anafilaksis ec susp drug induced (ketorolac),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,164,NNM,78,P,*6007127,Exclude,Reaksi Hipersensitivitas Akut e.c susp food dd drug (citralock?),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,165,SA,53,P,23016482,Exclude,"Susp anaphylactic shock ec susp drug induced (paracetamol, plasmanate)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,166,NKAS,34,P,*6007384,Exclude,Reaksi hipersensitivitas ec susp food dd drug (paracetamol?),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,167,IKPA,74,L,*2042078,Exclude,Reaksi Hipersensitivitas Akut e.c susp drug (Seftriakson?) dd food,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,168,NWY,NA,P,x6008216,Exclude,"Reaksi anafilaksis ec susp drug (asam mefenamat, protofen supp, misoprostol)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,169,DH,34,P,26008893,Exclude,Reaksi hipersensitivitas ec susp drug induced (omeprazole ? dd metylprednisolon ?),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,170,SASM,21,P,960397,Exclude,Reaksi Hipersensitivitas + Erupsi Obat dd SJS,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,171,NI KADEK DWIANTARI,23,P,26009344,Exclude,"MULTIPLE DRUG ALLERGY (parasetamol, ibuprofen, asam mefenamat)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+72,172,H,68,P,01436856,Include,REAKSI ANAFILAKSIS EC SUSP DRUG NSAIDS (CELECOXIB) DD FOOD,celecoxib,Drugs,CAD,alergi obat,tidak ada,3,Reaksi_anafilaksis,urtikaria,tidak ada,wheezing,tidak ada,7.71,5.27,1.81,0.47,0.14,0.02,13.30,40.10,300.00,8.50,NA
+NA,173,IWS,59,L,26007594,Exclude,Reaksi hipersentivitas ec susp levofloksasin,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,174,NLNW,38,P,26010266,Exclude,Susp Reaksi anafilaksis ec produk darah (PRC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+73,175,NLCP,25,P,26011588,Include,Reaksi Hipersensitivitas e.c susp drug eruption,parasetamol,Drugs,tidak ada,tidak ada,Dengue,3,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,3.76,2.27,1.22,0.25,0.01,0.01,14.80,46.40,147.00,10.10,NA
+NA,176,I KOMANG DWI ADNYANA,30,L,26010464,Exclude,TEN ec susp Kotrimoksasol dd/ Azithromicin dd Parasetamol,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,177,INM,78,L,26011178,Exclude,Hipersensivitias akut ec susp produk darah,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+74,178,AS,48,L,26012170,Include,REAKSI ANAFILAKSIS EC SUSP DRUG (NATRIUM DICLOFENAC) DD FOOD,diklofenak,Drugs,artralgia,tidak ada,tidak ada,1,Reaksi_anafilaksis,urtikaria,tidak ada,tidak ada,hipotensi,8.72,2.78,5.63,0.22,0.07,0.02,14.60,42.90,407.00,9.90,NA
+75,179,NI PUTU ARIAWATI,35,P,26012474,Include,Reaksi hipersensitivitas ec susp drug (seftriaxone),sefalosporin,Drugs,tidak ada,alergi antibiotik,ISK,0.1,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,12.80,10.36,1.79,0.57,0.07,0.01,12.90,40.60,308.00,9.30,NA
+NA,180,I DEWA MADE WIRAYUDA,26,L,22047067,Exclude,"Reaksi hipersensitivitas ec susp drug (cotrimoxazole, lansoprazole, ceftriaxone, levofloxacin) dd food
+4. Low risk of CIN",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+76,181,AGUNG PURWANTORO,43,L,26003723,Include,"REAKSI ANAFILAKSIS AKUT H-4 EC SUSP DURG INDUCED (ASETILSALICYLIC ACID , RAMIPRIL)",aspirin,Drugs,CAD,tidak ada,tidak ada,4,Reaksi_anafilaksis,makula hiperemis,tidak ada,tidak ada,tidak ada,5.67,3.45,1.56,0.55,0.09,0.02,16.90,50.40,253.00,0.00,NA
+77,182,NI LUH WIDIANI,28,P,23000505,Include,REAKSI ANAFILAKTIK,dexketoprofen,Drugs,tidak ada,tidak ada,Bacterial Infection,4.00,Reaksi_anafilaksis,Makulopapular,Tidak ada,Wheezing,TIdak ada,19.00,14.91,2.11,0.51,1.43,0.04,13.00,41.40,311.00,9.30,NA
+78,183,IKAP,36,L,26013164,Include,REAKASI HIPERSENSITIVITAS AKUT H3 EC DRUG INDUCED (AMOKSISILIN),amoksisilin,Drugs,tidak ada,tidak ada,Viral infection,2.00,Reaksi_hipersensitivitas,makulopapular,tidak ada,tidak ada,tidak ada,10.05,7.72,2.05,0.25,0.02,0.01,14.10,43.30,197.00,10.40,NA
+79,184,NI WAYAN RATNA MULIA ADNYANI,18,P,26013360,Include,Reaksi hipersensitivitas ec susp food,Seafood,Food,Tidak ada,Alergi ikan tuna,Viral infection,1.00,Reaksi_hipersensitivitas,Makulopapular,tidak ada,tidak ada,tidak ada,7.20,6.06,0.65,0.49,0.01,0.01,13.90,41.40,327.00,9.50,NA
+NA,185,NANI MARTININGSIH,48,P,23011721,Exclude,Reaksi hipersensitivitas akut ec susp asetilsistein,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,186,LESTARIE MUTHIA HAER,30,P,24021134,Exclude,Reaksi hipersensitivitas ec susp produk darah,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+80,187,Kadek Notes,22,L,1502774,Include,"REAKSI HIPERSENSITIVITAS EC SUSP DRUG INDUCED (PARASETAMOL, KODEIN) DD FOOD INDUCED",parasetamol,Drugs,KNF,"alergi Udang, ketorolak, MST, Natrium diklofenak, dexketoprofen",tidak ada,3,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,26.04,24.36,0.69,0.93,0.01,0.05,11.00,36.10,404.00,8.00,NA
+81,188,I PUTU RICHARDS PUTRA MULIAWAN,23,L,26012544,Include,Reaksi Hipersensitivitas ec susp Drug Induced (Natrium diklofenak dd/ Cefadroksil),diklofenak,Drugs,Ginggivitis,"alergi udang
+alergi obat ibuprofen",ginggivitis,0.5,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,15.69,11.14,3.53,0.93,0.07,0.02,15.20,46.10,296.00,9.70,NA
+NA,189,NS,77,P,14005843,Exclude,Reaksi hipersensitivitas akut ec susp obat aspilet dd Levofloksasin dd CPG,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+82,190,Tumiatin,51,P,24057537,Include,reaksi hipersensitivitas ec Drug reaction ( Ceftriaxone ),sefalosporin,Drugs,Kolesistitis,alergi suhu panas,Kolesistitis,2,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,12.97,10.42,1.74,0.75,0.04,0.02,12.60,37.90,229.00,10.20,NA
+NA,191,Tri Wahyu Ramadhan,21,L,24037851,Exclude,REAKSI HIPERSENSITIVITAS E.C OBAT KONTRAS,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+83,192,DITA NUR WIDYA,25,P,26015862,Include,Reaksi anafilaksis,metamizole,Drugs,Gastroenteritis akut,tidak ada,Diarhea,0.50,Reaksi_anafilaksis,urtikaria,Diarhea,wheezing,tidak ada,13.65,13.02,0.54,0.08,0.01,0.01,12.60,37.50,213.00,10.10,330.56
+84,193,I GEDE WIRA PUTRA,33,L,17008573,Include,insect_bite,insect_bite,Others,Adenoma Hipofisis,"suhu, udang, dan ikan",CAP,0.50,Syok_anafilaksis,urtikaria,tidak ada,wheezing,shock,9.57,6.65,2.39,0.41,0.11,0.01,11.10,32.80,235.00,9.40,NA
+NA,194,I Made Sukrawan,41,L,20044499,Exclude,⁠Reaksi Hipersensitivitas akut ec suspect drug induced (kontras),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,195,Desak Putu Merta,54,P,26010587,Exclude,Reaksi hipersensitivitas akut ec susp drug (Kodein),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+85,196,NI KADEK PUSPAWATI,22,P,26001632,Include,Reaksi Anafilaktik ec suspek drug (Ceftriaxon),sefalosporin,Drugs,SLE,autoimun,CAP,1,Reaksi_anafilaksis,urtikaria,tidak ada,wheezing,tidak ada,3.75,2.73,0.75,0.25,0.01,0.01,6.20,20.50,207.00,10.10,NA
+86,197,JOOBIM MATIAS PATTINASARANI,31,L,26017165,Include,"Reaksi hipersensitivitas akut ec susp obat (parasetamol, vermint)",parasetamol,Drugs,tidak ada,tidak ada,Viral infection,4,Reaksi_hipersensitivitas,urtikaria,dispepsia,tidak ada,tidak ada,13.88,9.41,3.72,0.65,0.08,0.02,13.00,40.20,488.00,8.90,NA
+87,198,JENSISTRO UMBU PATI,19,L,26016864,Include,⁠Reaksi Hipersensitivitas ec drug reaction (ceftriaxone),sefalosporin,Drugs,tidak ada,tidak ada,thypoid,2,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,5.29,1.69,2.57,0.63,0.36,0.04,14.40,42.10,56.00,0.00,NA
+NA,199,NI MADE DWI ARYASTUTI,25,P,24010623,Exclude,reaksi hipersensitivitas ec susp drug induced (parasetamol),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+88,200,NI DESAK KOMANG ELYQ SUARYANI,37,P,24029127,Include,Reaksi hipersensitivitas akut ec drug induced (ciprofloxacin),siprofloksasin,Drugs,tidak ada,tidak ada,pyelonefritis akut,1,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,8.47,5.65,2.08,0.66,0.06,0.02,11.60,35.40,211.00,10.70,NA
+NA,201,KADEK INDRA WIGUNA,25,L,26012395,Exclude,"Toxic Epidermal Necrolysis et kausa Suspek Kotrimoksazol, Obat Anti Tuberkulosis, Benzatin Penisilin, Risperidon, Kodein, Lorazepam",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,202,Wahyuni,32,P,26013352,Exclude,Reaksi hipersensitivitas akut ec susp Cotrimoxazole dd Paracetamol,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,203,Ambari,31,L,17051696,Exclude,Reaksi anafilaksis ec drug induced (asam mefenamat),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,204,RUDI WARDONO,67,L,2601843,Exclude,Reaksi Hipersensitivitas tipe lambat et causa susp antibiotic (Levofloxacin),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+89,205,I GUSTI AYU REINA CAHYANTI,25,P,26019293,Include,Reaksi hipersensitivitas akut ec parasetamol dan ibuprofen,ibuprofen,Drugs,gravida,"alergi udang, siprofloksasin, amoksisilin, azitromisin, parasetamol, antalgin",ISK,0.5,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,6.76,5.96,0.50,0.29,0.00,0.01,10.00,28.80,208.00,8.90,NA
+90,206,MADE RATNA DUHITA HARDIYANTI,18,P,24020109,Include,Reaksi Anafilaksis ec susp food induced (matcha dd ayam),ayam,Food,SLE,autoimun,tidak ada,0.5,Reaksi_anafilaksis,urtikaria,tidak ada,wheezing,tidak ada,4.54,1.79,2.21,0.43,0.09,0.02,14.90,46.20,259.00,12.10,NA
+NA,207,I Wayan Subrata,43,L,24057016,NA,Syok anafilaksis ec susp drug (Sefoperazone subactam),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,208,NI PUTU NILAWATI,82,P,26020091,NA,Reaksi Hipersensitifitas Akut ec antibiotik (Seftriaxon),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,209,I NYOMAN SUMADI ARTHA,54,L,24044673,NA,Reaksi hipersensitivitas ec susp drug induced (levofloksasin?),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+91,210,MADE AMBHURAJA DEEVAN,20,L,00918134,Include,Reaksi hipersensitivitas akut ec susp makanan (Kepiting),Kepiting,Food,tidak ada,"suhu panas, udang",TIdak ada,0.50,Reaksi_hipersensitivitas,Urtikaria,tidak ada,tidak ada,tidak ada,10.17,8.42,1.43,0.25,0.06,0.01,17.30,52.10,342.00,9.20,NA
+92,211,SEPTI NINGSIH SANTOSO,21,P,26021108,Include,Reaksi Hipersensivitas Akut ec susp. suhu dd/ Stressor,suhu,Others,"BPPV, CKR,","Stress, suhu panas",Viral infection,4.00,Reaksi_hipersensitivitas,"Urtikaria, makulopapular",tidak ada,tidak ada,tidak daa,9.57,7.88,1.08,0.58,0.02,0.01,16.80,49.10,340.00,9.40,NA
+NA,212,I WAYAN SUDIRMAN,75,L,26014114,NA,"Eritroderma suspek drug induced et kausa suspek bisoprolol, clopidogrel, kandesartan dd psoriasis vulgaris",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,213,Gede Yuliastika,38,L,26006469,NA,Reaksi Hipersensitivitas ec produk darah (PRC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,214,I NYOMAN NURSURYANEGARA,46,L,26012787,NA,"REAKSI HIPERSENSITIVITAS AKUT EC DRUG (ASPILET, CLOPIDOGREL, TICAGRELOL)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,215,I WAYAN SUARDANA,43,L,26017417,NA,Mucosal drug eruption dd isolated oral mucositis R. Labia Oris ec susp drug hypersensitivity (fenitoin),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,216,IDA BAGUS BAWA,72,L,26020193,NA,"REAKSI HIPERSENSITIVITAS E.C SUSP OBAT ( PIRAZINAMID, LEVOFLOKSASIN ) (MEMBAIK)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,217,ABD RIFAI,33,L,24046031,NA,Reaksi hipersensitivitas akut ec susp produk darah (PRC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+93,218,YUNITA BILI,37,P,26023524,Include,Susp generalized makulopapular drug eruption,sefalosporin,Drugs,ACKD,tidak ada,SSTI,2.00,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,10.22,8.36,0.46,0.52,0.87,0.01,7.50,20.80,134.00,9.40,NA
+NA,219,I WAYAN SUBADA,70,L,00063999,NA,Reaksi anafilasksis ec susp aasetosal,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,220,YELLY SUSANTI,62,P,26023090,NA,Reaksi hipersentivitas ec susp kontras induced,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,221,I NENGAH DITAYASA,34,L,26021054,NA,Reaksis Hipersensitivitas ec drug induced ( Dapson dd Amoxicilin ),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+94,222,KADEK EVA PUTRI DWIYANTI,20,P,17000912,Include,REAKSI HIPERSENTIVITAS EC SUSP MAKANAN (TERASI ? UDANG?),udang,Food,Hemangioblastoma,tidak ada,tidak ada,2.00,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,14.36,8.01,5.49,0.69,0.15,0.02,19.60,56.70,378.00,9.70,NA
+NA,223,NI LUH NETRI,68,P,26025350,NA,Reaksi hipersensitivitas akut ec obat (aspilet),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,224,NI KADEK YOLANDA AYU PRAMESWARI,20,P,22047324,NA,Susp reaksi hipersensitivitas akut ec drug induced (fenitoin),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,225,NI MADE MARHAENI,61,P,26008808,NA,⁠reaksi hipersensitivitas akut ec drug induced (resfar),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,226,I Nyoman Dirgayuda,60,L,26026155,Exclude,Syok anafilaksis ec susp contrast,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,227,NI NYOMAN SUASTINI,51,P,190006261,NA,Riwayat reaksi hipersensitifitas fenofibrat,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+95,228,NI MADE META RAHMAYANTI,41,P,26027785,Include,⁠Reaksi Anafilaksis ec susp Insect Bite,insect_bite,Others,tidak ada,tidak ada,tidak ada,0.20,Reaksi_anafilaksis,"Palpebral edema, urtikaria",tidak ada,wheezing,tidak ada,14.88,13.21,1.14,0.52,0.01,0.01,13.40,40.20,235.00,12.30,NA
+NA,229,KADEK SRI WAHYUNI INDRAWATI,34,P,26025998,NA,Reaksi anafilaksis ec susp kontras,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,230,DEWA GEDE OKA,54,L,24046504,NA,Reaksi anafilaksis ec susp drug induced (Oxaliplatin),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,231,NORASMIYATI,61,P,26029133,Exclude,reaksi hipersensitivitas,kotrimoksasol,Drugs,"ISK, ACKD",Tidak ada,ISK,6.00,NA,urtikaria,tidak ada,tidak ada,tidak ada,9.18,5.46,2.09,0.97,0.61,0.05,9.10,26.20,433.00,7.90,NA
+NA,232,STEWART PAUL ZACHARY MORRIS,61,L,24052717,NA,Reaksi hipersensitivitas ec susp produk darah (PRC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,233,NI NYOMAN SEGER,65,P,26030622,NA,Urtikaria generalisata ec susp reaksi alergi produk darah (PRC) (membaik),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,234,Yulianto Eko Indra Styawan,43,L,26030695,NA,Reaksi hipersensivitas ec susp drug induced,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,235,NI KETUT SUDANTI,48,P,26031295,NA,Reaksi anafilaksis ec drug related,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,236,NI Kadek Dwi,19,P,24054669,NA,Reaksi hipersensitivitas akut ec produk darah (TC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,237,EKA CORY ARIANI,40,P,26007161,NA,Reaksi anafilaksis ec drug related (levofloxacin),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,238,NI PUTU SUWENDINI,57,P,23059318,NA,Reaksi Anafilaksis ec susp drug induced (Na diclofenac),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,239,I NENGAH SORTO,83,L,26031607,NA,Reakti hipersensitivitas akut ec susp produk darah (PRC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,240,NASIMO,61,L,26029182,NA,⁠reaksi hipersensitivitas akut ec produk darah,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,241,ANDHIKA GARISWASITA,33,L,21020787,NA,Sindrom Stevens-Johnson overlap Toksik Epidermal Nekrolisis,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,242,Melkianus Honga Ledi,32,L,26027303,NA,⁠Riwayat reaksi hipersensitivitas ec susp obat (cotrimoxazole),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,243,NI MADE CAHYANI,43,P,26025509,NA,"Reaksi Hipersensitivitas Akut ec susp Drug Induced (Levofloxacin, Celecoxib)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+96,244,BRO0KE ANN KNIGHT,29,P,26033823,Include,Reaksi Hipersensitivitas Akut ec susp food intake,udang,Drugs,Afektif Bipolar,"alergi telur, udang",tidak ada,6.00,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,20.33,16.14,2.21,1.94,0.01,0.04,12.40,38.10,319.00,10.60,NA
+NA,245,KRISTO,38,L,26029525,NA,Reaksi hipersensitivitas ec susp drug induce,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,246,NI NYOMAN LELI,61,P,24035382,NA,"Stevens-Johnson Syndrome Overlap Toxic Epidermal Necrolysis et kausa Suspek Parasetamol, Siprofloksasin",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,247,Maliki,29,L,26035759,NA,"REAKSI HIPERSENSITIFITAS EC SUSP DRUG (ONDANSETRON, LANSOPRAZOLE, SEFIKSIM, PARASETAMOL)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+97,248,IRPAN RESTUTIANTO,58,L,22027908,Include,Syok anafilaksis,sefalosporin,Drugs,"karies, SCC lidah","alergi sulfa, ibuprofen",karies gigi,0.30,Reaksi_anafilaksis,urtikaria,tidak ada,tidak ada,shock,23.83,19.72,2.88,1.14,0.05,0.04,14.90,44.20,433.00,8.50,NA
+98,249,BINTA LESTARI PUTRY,26,P,26035956,Include,"Reaksi Hipersensitifitas Akut (Tolak Angin, Bye Bye Fever)",herbal,Drugs,tidak ada,"Ciprofloxacin, Paramex, Bodrex, Intunal,, bye bye fever",viral,1.00,Reaksi_hipersensitivitas,palpebral edema,tidak ada,tidak ada,tidak ada,6.32,4.96,0.57,0.51,0.26,0.02,12.90,38.10,249.00,9.40,NA
+99,250,NI WAYAN METRIANI,50,P,01292444,Include,Reaksi anafilaksis ec susp food product (terasi),Terasi,Food,tidak ada,alergi udang,LRTI,1.00,Reaksi_anafilaksis,urtikaria,tidak ada,tidak ada,tidak ada,7.87,5.28,1.70,0.70,0.18,0.01,12.70,38.70,297.00,8.70,NA
+NA,251,LAROCI,32,L,26035028,Exclude,Obs syok ec susp anafilaksis (ec susp levofloksasin) + septik,Levofloksasin,Drugs,"AML, Sepsis, AKI",TIdak ada,CAP,2.00,NA,urtikaria,tidak ada,tidak ada,shock,59.03,7.95,10.03,41.03,0.00,0.02,7.40,22.10,5.00,9.10,NA
+100,252,NI NYOMAN KARMIATI,43,P,26036744,Include,"Reaksi hipersensitivitas akut ec susp drug (ceftriaxon, parasetamol) dd food",sefalosporin,Drugs,Hepatitis,tidak ada,CAP,5.00,Reaksi_hipersensitivitas,makulopapular,tidak ada,tidak ada,tidak ada,6.74,6.20,0.46,0.08,0.01,0.01,12.50,38.20,147.00,10.10,NA
+NA,253,I WAYAN TISNAWAN,35,L,26035385,NA,Reaksi hipersensitivitas akibat produk darah (PRC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+101,254,ANAK AGUNG KETUT MAS SUMIARIANTI,37,P,21055432,Include,1. REAKSI ANAFILAKSIS EC SUSP FOOD PRODUCT (IKAN TUNA),Tuna,Food,tidak ada,Ikan Tuna,tidak ada,1.50,Reaksi_anafilaksis,urtikaria,tidak ada,wheezing,tidak ada,9.64,3.58,5.38,0.53,0.11,0.04,12.00,36.40,309.00,8.80,NA
+NA,255,Ni Luh Putu Renawati SE,53,P,26036790,NA,Reaksi hipersensitivitas ec susp produk darah (PRC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+102,256,I DEWA NYOMAN SUARJANA AS SE,50,L,26037569,Include,"Reaksi hipersensitivitas H5 ec susp drug (Cefixim, Parasetamol, ondansentron, omeprazole, azitromisin) (membaik)",sefalosporin,Drugs,tidak ada,alergi obat multipel,Viral,4.00,Reaksi_hipersensitivitas,urtikaria,tidak ada,tidak ada,tidak ada,5.57,4.34,0.73,0.37,0.12,0.01,16.60,50.30,173.00,11.30,NA
+NA,257,Citra Yuliana,42,P,01365023,NA,Reaksi Hipersesitivitas ec Drug (Ketorolac),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,258,SIRIRAT JAISAI,48,P,26034757,NA,Reaksi hipersensitivitas et kausa susp Seftriakson (membaik),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+103,259,ROBIETULHAQQ MUZZAMBIK AD DAURIE,23,L,26038463,Include,⁠Reaksi anafilaksis H2 ec susp Food (ikan),Ikan,Food,tidak ada,tidak ada,tidak ada,2.00,Reaksi_anafilaksis,urtikaria,tidak ada,wheezing,tidak ada,12.63,10.79,1.38,0.39,0.05,0.02,14.70,44.20,362.00,9.40,NA
+104,260,Nur Gani,25,P,26038849,Include,Syok anafilaksis ec susp food induced (ikan pindang),Ikan,Food,tidak ada,ikan,tidak ada,0.50,Syok_anafilaksis,urtikaria,tidak ada,tidak ada,shock,11.02,5.68,4.70,0.50,0.10,0.04,13.20,39.60,347.00,9.10,NA
+NA,261,Ni Nyoman Murdani,49,P,26034616,NA,Reaksi hipersensitivitas akut ec susp drug (n-asetilsistein),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,262,I Dewa Putu Merta,53,L,26038608,NA,Reaksi Hipersensitivitas e.c susp Produk Darah,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,263,Sukartini,70,P,21061454,NA,Reaksi anafilaksis ec susp N-Asetilsistein,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,264,NI KETUT SURIANI,50,P,26039408,NA,Reaksi hipersensitivitas ec susp drug induced (ampicilin),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,265,AKU TERIMA ZEBUA,NA,P,26040208,NA,"Reaksi Anafilaksis ec susp Drug Induced (Parasetamol, Caffein)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,266,I MADE SANJAYA,57,L,24025980,NA,REAKSI HIPERSENSITIVITAS EC KONTRAS DD DRUG DD FOOD,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+105,267,AHMAD SAKTYA DEVA ARJUNA WICAKSONO,23,L,26041134,Include,Reaksi anafilaksis ec susp bulu anjing dd food (udang),bulu_anjing,Food,Tidak ada,Tidak ada,Tidak ada,1.00,Reaksi_anafilaksis,urtikaria,tidak ada,wheezing,tidak ada,9.78,7.70,1.23,0.76,0.07,0.02,16.90,48.20,259.00,9.40,NA
+NA,268,NI NYOMAN RESNI,61,P,26036023,NA,SUSP REAKSI HIPERSENSITIVITAS EC DRUG (CONTRAST),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+106,269,I GUSTI NGURAH MANIK,50,L,21035261,Include,Reaksi anafilaksis ec susp food allergy dd drug,food_nonspecific,Food,"CKD, CHF, DM",tidak ada,tidak,4.00,Reaksi_anafilaksis,urtikaria,tidak ada,wheezing,tidak ada,11.18,9.70,0.51,0.94,0.02,0.01,8.90,26.50,62.00,12.70,NA
+NA,270,NI MADE DESIASTUTI,32,P,24028327,NA,Reaksi Anafilaksis ec Susp Produk Darah (PRC),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,271,Oktaviana Gorita Bulu,21,P,26043117,NA,"Reaksi anafilaksis ec susp drug induced (ketorolac, parasetamol)",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,272,JEFRI LENDE,30,L,26043881,NA,Reaksi hipersensitivitas ec susp drug induced (floroquinolon?),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,273,NI NENGAH MERTI,67,P,21007081,NA,Reaksi anafilaksis ec susp contrast induced,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,274,I MADE SUNARYA,81,L,26043250,NA,reaksi anafilaksis e.c. suspect drug (asetilsistein),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,275,ADELLIA INDAH SARASWATI,20,P,26018539,NA,Reaksi hipersensitifitas ec susp drug (seftriakson),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,276,Yulius Lalu Mila SE,47,L,26042572,NA,Reaksi Hipersensitivitas akut ec susp drug induced (Asetilsitein?),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,277,LUH SUCI,38,P,14060205,NA,Reaksi Hipersensitivitas Akut e.c susp produk kontras dd/ obat (NSAID?),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,278,SAMUEL ANDREW GLENN,64,L,26038406,NA,Reaksi hipersensitivitas ec susp kontras dd drug induced (aspilet),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,279,NI WAYAN GINANTI,19,P,26046231,NA,Reaksi hipersensitivitas akut terhadap Obat ec. susp Ciprofloxacin IV,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,280,MULTAZAM,39,L,26039340,NA,Reaksi Anafilaksis e.c drug induced (MST),MST,Drug,"Recurrent GCT of Right Knee, Hipoalbuminemia, CHF FC II",NA,Infection,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,281,NANIK ZULAIKHA,46,P,965830,NA,Reaksi Anafilaksis e.c susp food dd suhu,Food dd Suhu,Food,-,NA,-,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,282,PIETER SUN JOLEE NADEAK,18,P,26046794,NA,REAKSI HIPERSENSITIVITAS AKUT EC SUSP DRUG (OAT FDC KAT I),OAT FDC KAT I,Drug,Leukositosis ec susp reaktif,NA,-,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,283,NI KETUT SARNI,57,P,26043246,NA,Riwayat Reaksi Hipersensitivitas ec obat (OAT),OAT,Drug,"CKD st IV, Hipertensi Stage I",NA,Bacterial Infection,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,284,I Gusti Ayu Listiari,18,P,13018439,NA,Reaksi anafilaktik ec drug induced (ketorolac) dd food (terasi),Ketorolac / Terasi,Drug / Food,-,NA,TB Paru,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,285,Drs I Ketut Nuarca MS,69,L,19021056,NA,"Reaksi hipersensitivitas ec susp drug induced (seftriaxone, levofloxacin)","Seftriaxone, Levofloxacin",Drug,"Ca Prostat, Multiple myeloma, Fraktur Th6, Immobilisasi, Hepatitis, Innanition",NA,Susp Pyelonefritis akut,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,286,NI KETUT SUJANI,53,N/A,26044426,NA,Riwayat Reaksi Hipersensitivitas ec obat (OAT),OAT,Drug,"Hipertensi Stage I, DM Tipe 2, Dislipidemia",NA,Susp ISK Komplikata,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,287,AM,20,L,24029752,NA,Syok Anafilaksis ec Susp Produk Darah (TA/TCA),Produk Darah (TA/TCA),Blood,"AML M2 Relaps, Cardiotoxicity, Hipokalsemia, Dyspepsia",NA,TB Paru,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,288,KETUT SANTIADA,40,L,26045374,NA,Reaksi hipersensitivitas ec susp drug (seftriakson),Seftriakson,Drug,"ODS Uveitis Intermediate, Probable neurosifilis",NA,LRTI,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,289,NI MADE MUNTRI,77,P,26047029,NA,"Reaksi hipersensitivitas akut ec susp drug (Seftriakson, Azitromisin) dd Food","Seftriakson, Azitromisin dd Food",Drug / Food,"Delirium hipoaktif, Hiponatremia, ACKD, Dermatitis, Hepatitis, Falls, Innanition",NA,"Infeksi HIV Std IV, Sifilis Laten Lanjut",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,290,Identitas Pasien GUSTI KETUT AYU,52,P,26047417,NA,"Multiple alergi (Ibuprofen, Paracetamol, Antalgin) / Riwayat syok anafilaktik","Ibuprofen, Paracetamol, Antalgin",Drug,Dehidrasi sedang,NA,CAP PSI Class IV,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,291,I MADE SUKRAMA,63,L,26047470,NA,Reaksi hipersensitivitas akut ec susp produk darah (TC),Produk darah (TC),Blood,"Kolelitiasis, AKI st 2, Partial bowel obstruction, BPH, Completed SNH",NA,Gastroenteritis akut ec susp viral dd bacterial,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,292,KOMANG NELI PRATINI,21,P,26047529,NA,Reaksi anafilaktik ec susp tungau dd food,Tungau dd Food,Insect / Food,-,NA,"Sepsis, HAP, Dengue",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,293,an . MADE BUDI ARTAWAN,N/A,L,22004796,NA,Reaksi Hipersensitivitas Akut ec Susp Produk darah (PRC),Produk darah (PRC),Blood,"Obs Melena ec Ruptur Varises Esofagus, Sirosis Hepatis CTP B",NA,-,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,294,I MADE PANGKAT,68,L,26038548,NA,Riwayat reaksi hypersensitivitas ec drug (aspirin),Aspirin,Drug,"Asma terkontrol, CAD 3 VD + LM disease",NA,-,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,295,SITI ELIH NURLAELA,30,N/A,26047637,NA,Reaksi anafilaktik ec susp drug (asam mefenamat) dd food,Asam Mefenamat dd Food,Drug / Food,-,NA,Susp tonsilofaringitis dd/ISPA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,296,ARIA CITRA KUSUMA,38,P,26047832,NA,Syok anafilaktik ec susp food (daging olahan),Daging olahan,Food,-,NA,-,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,297,Ni Nyoman Suartini,61,P,26044529,NA,"Reaksi Hipersensitivitas Akut ec susp Drug (Parasetamol, Ibuprofen, Metilprednisolon, Deksametason) dd Food (Udang, Terasi)","Parasetamol, Ibuprofen, Kortikosteroid, Udang, Terasi",Drug / Food,-,NA,-,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,298,I KETUT PASEK,56,L,23020763,NA,Reaksi hipersentivitas ec susp drug induced (cisplatin),Cisplatin,Drug,"LNH Sinonasal Dextra, Kemotherapy Myelosupresi, Post Radiasi",NA,-,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,299,Jro Darta,56,P,26012114,NA,Reaksi hipersensitivitas e.c susp produk darah (PRC),Produk darah (PRC),Blood,"LNH Sinonasal DLBCL, AKI St II",NA,-,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,300,Ni Putu Parastuti Lestari,26,P,23030320,NA,Reaksi Anafilaksis ec susp drug induced,Drug Induced,Drug,Anemia ringan NN ec susp ACD,NA,ISPA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,301,NI MADE PUTRI ASTINI,52,P,26043944,NA,Reaksi Hipersensitivitas,NA,NA,ACKD ec susp prerenal dd postrenal on CKD; Susp Ca Cervix St IIIB; Anemia sedang HM; Hidronefrosis Bilateral Gr. III-IV; Post Nefrostomy D/S; Hipertensi terkontrol,NA,"CAP , ISK",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,302,PM,68,P,26048498,NA,Bisitopenia ec susp Leukemia acute (AML dd ALL),N/A,N/A,"Susp Akalkulus Cholecystitis, Cardiomegaly, Hipoalbuminemia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,303,NA,35,L,26011094,NA,Obs hipoglikemia berulang ec susp paraneoplastik,N/A,N/A,"Obs massa abdomen, Obs multiple nodul paru",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,304,AM,53,P,26049173,NA,SJS,N/A,Drug,"ACKD ec susp pre renal on CKD, Hepatitis ec susp reactive",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,305,AM,52,L,26048765,NA,Susp HCC,N/A,Drug,"Sirosis Hepatis, Hipoalbumin, Ascites, CAP",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,306,isolasi  EDWINNA ARYANI,34,P,26047367,NA,Reaksi Hipersensitivitas Akut ec susp Drug (Phenytoin),Phenytoin,Drug,"Multiple lymphadenopathy, SOL serebri",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,307,NI KETUT SUKARMINI,55,P,19032874,NA,Obs hematuria ec DD/ susp ISK dd BSK,N/A,N/A,"CHF FC II, Hiponatremia, Reaksi hipersensitivitas akut",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,308,PM,72,L,26049229,NA,DOC ec susp Encephalopati Uremikum,N/A,Blood,"CKD st V, Hepatitis, ADHF",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,309,NI PUTU MASTINI,38,P,16013118,NA,Reaksi Anafilkasis ec susp Drug Induced (Parasetamol),Parasetamol,Drug,-,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,310,KRISTINA RINI ASTITIN,47,P,24055380,NA,Urtikaria kronik spontan (Chronic Spontaneous Urticaria),N/A,N/A,"Obs abdominal pain, Obesitas, Konstipasi",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,311,PM,76,L,26021937,NA,Delirium hipoaktif ec susp hipoksik dd septik,N/A,N/A,"Demensia vaskuler, ACKD, CAD 1VD, Aneurysma Aorta",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,312,RIZKY ALFIAN,27,L,26050294,NA,Reaksi Hipersensitivitas ec susp Drug Eruption,N/A,Drug,"Hepatitis, Hiponatermia, Suspek Morbus Hansen Tipe LL",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,313,Putri Wulan Sari,20,P,26050326,NA,Reaksi hipersensitivitas akut ec susp food (jamu),Jamu,Food,SLE derajat aktivitas ringan,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,314,an MADE ESNY,55,P,24018716,NA,Reaksi Hipersensitivitas ec Susp. Produk Darah (PRC),Produk Darah,Blood,"Sepsis, DM tipe 2, ACKD, ISK Komplikata",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,315,Identitas Pasien NI WAYAN SUKMA SURIYANI,40,P,951700,NA,DOC ec susp ensefalopati viral,N/A,Drug,"Neuropati perifer, PPE, Hepatitis, Fatty Liver",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,316,AM,56,L,26034624,NA,Reaksi hipersensitivitas akut ec susp food (seafood),Seafood,Food,"Susp Supraspinatus Tear, Asma bronchial",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,317,Winarti,44,P,24049203,NA,ADENOCARCINOMA COLON SIGMOID STADIUM IV,N/A,Contrast/Food,"Metastasis Liver, DM Tipe II",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,318,PUTU KRISMA DEWI,23,P,26051362,NA,Febris hari 9 ec susp viral infection dd bakterial,N/A,N/A,"Morbiliform exanthema, Hipokalemia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,319,KADEK ADE SEPTIANI,18,P,26051130,NA,P0100 PsptB Post Partum H-0 + Rest Plasenta,N/A,Blood,"Obs jaundice, Diare kronik ec susp IBD",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,320,NA,67,P,26051022,NA,OBS PANSITOPENIA EC SUSP MDS DD ANEMIA APLASTIK,N/A,Blood,-,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,321,",  MELINA JESIKA MURNI",18,P,21023705,NA,AML M2 RELAPS,N/A,Blood,Hipokalemia ec susp. low intake,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,322,. I WAYAN SANDI ADNYANA,25,L,26000622,NA,CKD ST V EC SUSP GNC ON HD REGULER,N/A,Drug,"CHF EC HHD, Myocarditis",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,323,Ni Nyoman Ekawati,41,P,23062788,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,324,I KETUT WARGA DARMAJA,50,L,26049772,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,325,NI NYOMAN RESMINI,65,P,26051763,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,326,I WAYAN DERATA,51,L,26046587,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,327,NA,29,P,24019002,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,328,KADEK SINTA DEWI,24,P,26048727,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,329,HEIKAL RIZKY PRAMUDYA,35,L,26050763,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,330,AM,20,P,26032350,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,331,JULIAN HIKMAH,N/A,L,23065731,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,332,MUHAMMAD MARGIONO,25,L,26053347,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,333,Identitas Pasien I MADE SUARDIKA,50,L,26049605,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,334,an I WAYAN SEDANA,69,L,26031885,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,335,I WAYAN SIRAT,59,L,22032700,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,336,DIBBUR APPAIAH GAYATHRI,64,P,26054464,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,337,an NI LUH PUTU KUSUMAYANTHII,41,P,24001194,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,338,AM,53,L,26027599,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,339,Bella Ayu Pransiska,19,P,26021707,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,340,CHRISTINE JULIANA,18,P,26054697,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,341,NI KADEK KARTINI,33,P,26053598,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,342,Identitas Pasien SONIA YUDITH VALENTI,34,P,24042117,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,343,NI WAYAN RAI,48,P,26033558,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,344,Identitas Pasien LULUK UMIARSIH,41,P,26054910,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,345,AM,32,P,26056628,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,346,NI MADE PUSYENI,33,P,17038342,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,347,I NYOMAN ALIT,35,L,26055835,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,348,NA,51,L,24004678,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,349,NA,76,P,26056283,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,350,NI WAYAN WARTINI,22,P,26056895,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,351,NOVASARI MALLE,27,P,26057331,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,352,AMARUL FATHONY,33,L,26054395,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,353,NI MADE SUPARNI,57,P,15050681,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,354,Miswan,55,L,26058048,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,355,MARTA DANGGA LIMU,41,P,1159562,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,356,NI MADE PASEK DWIMAYANI,21,P,26058293,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,357,ESTER MARYANI SM HUTAPEA,34,P,26058067,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,358,PUTU NGURAH RANDIKA KUSLAWA,21,L,26058821,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,359,I LUH PUTU AYU SUGIANTARI,22,P,23035012,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,360,NI PUTU ANIK KONIDYA,32,P,24026790,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,361,I NYOMAN SUMANTRA,53,L,17023915,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,362,KOMANG TRISNA SUANDAYANI,29,P,26023507,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,363,An SANG AYU KOMANG WIESYA DEWINTHA,22,P,26047024,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,364,MARIA PARAMITHA MAHARANI,37,P,21053434,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,365,AM,57,L,26059656,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,366,PM,56,L,26060494,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,367,EKA SRI MULIANI,33,P,19008521,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,368,I GUSTI KOMANG ARNYANA,67,L,26058959,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,369,NA,25,P,26059550,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,370,NI KOMANG AYU ARY PRATIWI,48,P,1269413,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,371,NI NYOMAN TENI ASIH,38,P,26060343,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,372,PM,46,L,26061898,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,373,AM,65,L,26056383,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,374,NI MADE SUDIARNI,72,P,20033935,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,375,KADEK SUARTINI,65,P,26050670,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,376,Muhamad Matsur,35,L,26062796,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,377,PM,36,L,26041690,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,378,VALENTINUS BRIMA CAHYANDRA,35,L,26063198,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,379,YULI KRISTINA,47,P,26060536,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,380,I PUTU GEDE ANDRE WIRATAMA,33,L,26063684,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,381,AM,29,L,26058468,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,382,PM,25,L,26060235,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,383,PM,24,P,24055027,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,384,AM,51,L,26063739,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,385,NELLY,53,P,26063962,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,386,WIWI WINTARSIH,73,P,26062972,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,387,AM,73,P,26062818,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,388,NI GUSTI AYU MADE KEMBARANI,42,P,26048279,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,389,"GUSTINA MARYANTI MOOY, S.KED",28,P,24001892,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,390,I NYOMAN SUKARPA,N/A,L,17054792,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,391,PUTRI AYU DEVY PERMATASARI,33,P,26064657,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,392,I Dewa Ayu Diah Pratiwi,27,P,26064908,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,393,HARDIKA,51,L,26045584,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,394,I WAYAN BERANDI,69,L,26046235,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,395,AM,31,P,26002692,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,396,SYAHRANI TIARA PUTRI SANI,23,P,26065693,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,397,I DEWA GEDE AGUS SUDARSO,48,L,26065477,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,398,AM,62,L,26064463,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,399,GENI RESMANTO DJAWA TANA,22,L,26063617,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,400,I NYOMAN ARDANA,30,L,26040964,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,401,I GUSTI NYOMAN SUJANA,76,L,17025189,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,402,.  ELSADA PUTRI DEWI KARO SEKALI,19,P,26066794,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,403,SUPINDIA,78,L,26066806,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,404,DENISA RAMADHANTY,21,P,26066454,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,405,IDA AYU PUTU RINJANI,65,P,16030818,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,406,PM,34,P,26050542,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,407,Ida Ayu Indrawati,55,P,18031239,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+NA,408,NI KADEK DWI APRIANI,21,P,26064765,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

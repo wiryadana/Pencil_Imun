@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.9.38">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,6 +10,9 @@
 
 <title>pencil_imun</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -62,15 +65,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="pencil_imun_files/libs/clipboard/clipboard.min.js"></script>
 <script src="pencil_imun_files/libs/quarto-html/quarto.js" type="module"></script>
 <script src="pencil_imun_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="pencil_imun_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="pencil_imun_files/libs/quarto-html/popper.min.js"></script>
 <script src="pencil_imun_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="pencil_imun_files/libs/quarto-html/anchor.min.js"></script>
 <link href="pencil_imun_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="pencil_imun_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="pencil_imun_files/libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="pencil_imun_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="pencil_imun_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="pencil_imun_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="pencil_imun_files/libs/bootstrap/bootstrap-138a6193a3bd40baf1e627da441a4734.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -115,90 +117,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(googlesheets4)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(skimr)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(skimr)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(flextable)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="import-data" class="level2">
 <h2 class="anchored" data-anchor-id="import-data">Import Data</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data_awal <span class="ot">&lt;-</span> googlesheets4<span class="sc">::</span><span class="fu">read_sheet</span>(<span class="st">"https://docs.google.com/spreadsheets/d/11i1_hS6h00tasrYxlCTuPvGgTHqWb9de-eD8HLjLcQI/edit?gid=1161695245#gid=1161695245"</span>, <span class="at">sheet =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>! Using an auto-discovered, cached token.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>  To suppress this message, modify your code or options to clearly consent to
-  the use of a cached token.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>  See gargle's "Non-interactive auth" vignette for more details:</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>  &lt;https://gargle.r-lib.org/articles/non-interactive-auth.html&gt;</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>ℹ The googlesheets4 package is using a cached token for
-  'wiryadana.2371041012@student.unud.ac.id'.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>✔ Reading from "Data_pencil_imun".</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>✔ Range ''Master_8jan''.</code></pre>
-</div>
-</div>
 <section id="seleksi-data" class="level3">
 <h3 class="anchored" data-anchor-id="seleksi-data">Seleksi Data</h3>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>data_clean <span class="ot">&lt;-</span> data_awal <span class="sc">%&gt;%</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(inc_exc <span class="sc">==</span> <span class="st">"Include"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(<span class="dv">17</span><span class="sc">:</span><span class="dv">26</span>, as.numeric)) <span class="sc">%&gt;%</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Gender =</span> <span class="fu">as.factor</span>(Gender)) <span class="sc">%&gt;%</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">MR =</span> <span class="fu">as.character</span>(MR)) <span class="sc">%&gt;%</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Onset_jam =</span> <span class="fu">as.numeric</span>(Onset_jam))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: There was 1 warning in `mutate()`.
-ℹ In argument: `Onset_jam = as.numeric(Onset_jam)`.
-Caused by warning:
-! NAs introduced by coercion</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(data_clean)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 57
-Columns: 27
-$ No             &lt;dbl&gt; 3, 4, 5, 9, 11, 12, 13, 14, 15, 18, 20, 22, 29, 30, 31,…
-$ Nama           &lt;chr&gt; "NI MADE DARMAWATI", "GEDE ARTANA", "AJENG ISTYORINI AS…
-$ Usia           &lt;dbl&gt; 51, 31, 31, 53, 58, 34, 56, 21, 82, 28, 36, 30, 33, 61,…
-$ Gender         &lt;fct&gt; P, L, P, P, L, P, L, L, P, P, P, P, P, L, L, P, L, L, P…
-$ MR             &lt;chr&gt; "01558680", "22042447", "24041414", "24040798", "240393…
-$ inc_exc        &lt;chr&gt; "Include", "Include", "Include", "Include", "Include", …
-$ Diagnosis      &lt;chr&gt; "Suspek Drug-Induced Pemphigus dd/ Drug-Induced Bullous…
-$ Inducer        &lt;chr&gt; "Drug", "Drug", "Drug", "Food", "Drug", "Blood_Product"…
-$ Komorbid       &lt;chr&gt; "tidak ada", "tidak ada", "tidak ada", "asma eksaserbas…
-$ RF             &lt;chr&gt; "Ca cervix", "tidak ada", "tidak ada", "tidak ada", "DM…
-$ Infection      &lt;chr&gt; "SSTI", "tidak ada", "other alergy", "tidak ada", "tida…
-$ Onset_jam      &lt;dbl&gt; 24.00, 1.00, 0.50, 2.00, 0.50, 0.50, 1.00, 4.00, 0.25, …
-$ Skin           &lt;list&gt; "pemfigus", "Mata bengkak, kulit kemerahan", "urtikari…
-$ GIT            &lt;chr&gt; "tidak ada", "tidak ada", "tidak ada", "Vomiting", "tid…
-$ Pulmo          &lt;chr&gt; "tidak ada", "tidak ada", "tidak ada", "Dyspnea", "disp…
-$ Cardiovascular &lt;chr&gt; "tidak ada", "tidak ada", "shock", "tidak ada", "tidak …
-$ WBC            &lt;dbl&gt; 34.56, 6.41, 4.13, 14.25, 17.45, 5.85, 6.37, 14.15, 35.…
-$ Ne             &lt;dbl&gt; 32.80, 4.39, 2.44, 5.75, 14.38, 4.96, 2.61, 12.73, 1.62…
-$ Ly             &lt;dbl&gt; 0.54, 1.46, 1.29, 7.23, 1.45, 0.81, 1.10, 1.16, 15.15, …
-$ Mo             &lt;dbl&gt; 0.18, 0.08, 0.01, 0.21, 0.09, 0.01, 0.19, 0.02, 0.01, 0…
-$ Eo             &lt;dbl&gt; 0.96, 0.47, 0.39, 1.00, 1.48, 0.08, 0.48, 0.23, 18.31, …
-$ Ba             &lt;dbl&gt; 0.08, 0.01, 0.01, 0.06, 0.05, 0.01, 0.03, 0.01, 0.07, 0…
-$ HGB            &lt;dbl&gt; 6.7, 15.8, 13.8, 14.5, 15.5, 5.8, 13.4, 14.5, 7.9, 12.8…
-$ HCT            &lt;dbl&gt; 20.2, 47.3, 42.0, 44.8, 46.2, 17.0, 38.8, 44.1, 24.3, 3…
-$ PLT            &lt;dbl&gt; 57, 186, 287, 459, 346, 65, 188, 279, 137, 466, 421, 35…
-$ MPV            &lt;dbl&gt; 11.3, 10.8, 10.7, 8.6, 8.8, 9.6, 8.6, 9.7, 11.1, 8.7, 9…
-$ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;…</code></pre>
-</div>
-</div>
 </section>
 <section id="descritive-statistics" class="level3">
 <h3 class="anchored" data-anchor-id="descritive-statistics">Descritive Statistics</h3>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">skim</span>(data_clean)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: There was 1 warning in `dplyr::summarize()`.
+ℹ In argument: `dplyr::across(tidyselect::any_of(variable_names),
+  mangled_skimmers$funs)`.
+ℹ In group 0: .
+Caused by warning:
+! There was 1 warning in `dplyr::summarize()`.
+ℹ In argument: `dplyr::across(tidyselect::any_of(variable_names),
+  mangled_skimmers$funs)`.
+Caused by warning in `inline_hist()`:
+! Variable contains Inf or -Inf value(s) that were converted to NA.</code></pre>
+</div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <caption>Data summary</caption>
@@ -209,11 +152,11 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
 </tr>
 <tr class="even">
 <td style="text-align: left;">Number of rows</td>
-<td style="text-align: left;">57</td>
+<td style="text-align: left;">106</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Number of columns</td>
-<td style="text-align: left;">27</td>
+<td style="text-align: left;">44</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">_______________________</td>
@@ -225,25 +168,21 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
 </tr>
 <tr class="even">
 <td style="text-align: left;">character</td>
-<td style="text-align: left;">11</td>
+<td style="text-align: left;">7</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">factor</td>
-<td style="text-align: left;">1</td>
+<td style="text-align: left;">8</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">list</td>
-<td style="text-align: left;">2</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: left;">29</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">numeric</td>
-<td style="text-align: left;">13</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">________________________</td>
 <td style="text-align: left;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Group variables</td>
 <td style="text-align: left;">None</td>
 </tr>
@@ -252,7 +191,7 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
 <p><strong>Variable type: character</strong></p>
 <table class="caption-top table table-sm table-striped small">
 <colgroup>
-<col style="width: 20%">
+<col style="width: 19%">
 <col style="width: 13%">
 <col style="width: 19%">
 <col style="width: 5%">
@@ -278,20 +217,20 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
 <td style="text-align: left;">Nama</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">2</td>
-<td style="text-align: right;">34</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">39</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">57</td>
+<td style="text-align: right;">106</td>
 <td style="text-align: right;">0</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">MR</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">8</td>
+<td style="text-align: right;">5</td>
 <td style="text-align: right;">8</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">57</td>
+<td style="text-align: right;">106</td>
 <td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
@@ -308,80 +247,40 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
 <td style="text-align: left;">Diagnosis</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">16</td>
+<td style="text-align: right;">11</td>
 <td style="text-align: right;">246</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">57</td>
+<td style="text-align: right;">106</td>
 <td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Inducer</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">23</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">33</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">Komorbid</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">42</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">46</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">31</td>
+<td style="text-align: right;">60</td>
 <td style="text-align: right;">0</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">RF</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">84</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">35</td>
+<td style="text-align: right;">56</td>
 <td style="text-align: right;">0</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Infection</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">3</td>
 <td style="text-align: right;">19</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">22</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">GIT</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">16</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Pulmo</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Cardiovascular</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">7</td>
+<td style="text-align: right;">40</td>
 <td style="text-align: right;">0</td>
 </tr>
 </tbody>
@@ -389,12 +288,12 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
 <p><strong>Variable type: factor</strong></p>
 <table class="caption-top table table-sm table-striped small">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 14%">
-<col style="width: 20%">
+<col style="width: 16%">
 <col style="width: 11%">
-<col style="width: 13%">
-<col style="width: 19%">
+<col style="width: 15%">
+<col style="width: 8%">
+<col style="width: 10%">
+<col style="width: 37%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -413,62 +312,79 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
 <td style="text-align: right;">1</td>
 <td style="text-align: left;">FALSE</td>
 <td style="text-align: right;">2</td>
-<td style="text-align: left;">P: 30, L: 27</td>
+<td style="text-align: left;">P: 54, L: 52</td>
 </tr>
-</tbody>
-</table>
-<p><strong>Variable type: list</strong></p>
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 14%">
-<col style="width: 20%">
-<col style="width: 13%">
-<col style="width: 15%">
-<col style="width: 15%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">skim_variable</th>
-<th style="text-align: right;">n_missing</th>
-<th style="text-align: right;">complete_rate</th>
-<th style="text-align: right;">n_unique</th>
-<th style="text-align: right;">min_length</th>
-<th style="text-align: right;">max_length</th>
+<tr class="even">
+<td style="text-align: left;">Inducer</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">FALSE</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: left;">sef: 22, par: 8, foo: 6, ibu: 6</td>
 </tr>
-</thead>
-<tbody>
+<tr class="odd">
+<td style="text-align: left;">Grp_inducer</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">FALSE</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Dru: 67, Foo: 28, Oth: 11</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Alergy_Dx</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">FALSE</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Rea: 54, Rea: 40, Syo: 12</td>
+</tr>
 <tr class="odd">
 <td style="text-align: left;">Skin</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">23</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
+<td style="text-align: left;">FALSE</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: left;">urt: 67, urt: 8, tid: 3, mak: 2</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">IgE</td>
+<td style="text-align: left;">GIT</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">3</td>
+<td style="text-align: left;">FALSE</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: left;">tid: 91, dis: 3, Kol: 2, Dia: 1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Pulmo</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
+<td style="text-align: left;">FALSE</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">tid: 72, whe: 26, Whe: 2, dis: 1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cardiovascular</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">FALSE</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: left;">tid: 87, hip: 7, sho: 4, pal: 1</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Variable type: numeric</strong></p>
 <table class="caption-top table table-sm table-striped small">
 <colgroup>
-<col style="width: 15%">
+<col style="width: 14%">
 <col style="width: 10%">
-<col style="width: 15%">
+<col style="width: 14%">
+<col style="width: 8%">
+<col style="width: 8%">
 <col style="width: 7%">
 <col style="width: 7%">
-<col style="width: 6%">
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 7%">
-<col style="width: 7%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 9%">
 <col style="width: 6%">
 </colgroup>
 <thead>
@@ -491,107 +407,120 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
 <td style="text-align: left;">No</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
-<td style="text-align: right;">122.98</td>
-<td style="text-align: right;">96.95</td>
-<td style="text-align: right;">3.00</td>
-<td style="text-align: right;">31.00</td>
-<td style="text-align: right;">88.00</td>
-<td style="text-align: right;">222.00</td>
-<td style="text-align: right;">269.00</td>
-<td style="text-align: left;">▇▂▂▂▅</td>
+<td style="text-align: right;">53.50</td>
+<td style="text-align: right;">30.74</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">27.25</td>
+<td style="text-align: right;">53.50</td>
+<td style="text-align: right;">79.75</td>
+<td style="text-align: right;">106.00</td>
+<td style="text-align: left;">▇▇▇▇▇</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">No_awal</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">113.31</td>
+<td style="text-align: right;">79.43</td>
+<td style="text-align: right;">3.00</td>
+<td style="text-align: right;">45.50</td>
+<td style="text-align: right;">93.50</td>
+<td style="text-align: right;">186.25</td>
+<td style="text-align: right;">269.00</td>
+<td style="text-align: left;">▇▆▂▅▃</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">Usia</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
-<td style="text-align: right;">36.33</td>
-<td style="text-align: right;">13.97</td>
+<td style="text-align: right;">38.79</td>
+<td style="text-align: right;">16.51</td>
 <td style="text-align: right;">18.00</td>
 <td style="text-align: right;">25.00</td>
-<td style="text-align: right;">32.00</td>
-<td style="text-align: right;">47.00</td>
+<td style="text-align: right;">33.00</td>
+<td style="text-align: right;">51.00</td>
 <td style="text-align: right;">82.00</td>
-<td style="text-align: left;">▇▆▃▂▁</td>
+<td style="text-align: left;">▇▅▃▃▁</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Onset_jam</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0.98</td>
-<td style="text-align: right;">2.55</td>
-<td style="text-align: right;">4.44</td>
-<td style="text-align: right;">0.20</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">2.08</td>
+<td style="text-align: right;">3.38</td>
+<td style="text-align: right;">0.10</td>
 <td style="text-align: right;">0.50</td>
 <td style="text-align: right;">1.00</td>
-<td style="text-align: right;">3.00</td>
+<td style="text-align: right;">2.00</td>
 <td style="text-align: right;">24.00</td>
 <td style="text-align: left;">▇▁▁▁▁</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">WBC</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
-<td style="text-align: right;">13.36</td>
-<td style="text-align: right;">9.63</td>
-<td style="text-align: right;">4.13</td>
-<td style="text-align: right;">7.80</td>
-<td style="text-align: right;">10.21</td>
-<td style="text-align: right;">14.36</td>
-<td style="text-align: right;">59.03</td>
-<td style="text-align: left;">▇▁▁▁▁</td>
+<td style="text-align: right;">11.58</td>
+<td style="text-align: right;">6.38</td>
+<td style="text-align: right;">3.73</td>
+<td style="text-align: right;">7.50</td>
+<td style="text-align: right;">10.12</td>
+<td style="text-align: right;">13.75</td>
+<td style="text-align: right;">40.27</td>
+<td style="text-align: left;">▇▅▁▁▁</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Ne</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
-<td style="text-align: right;">8.99</td>
-<td style="text-align: right;">6.83</td>
+<td style="text-align: right;">8.55</td>
+<td style="text-align: right;">5.83</td>
 <td style="text-align: right;">1.62</td>
-<td style="text-align: right;">4.96</td>
-<td style="text-align: right;">7.60</td>
-<td style="text-align: right;">10.79</td>
+<td style="text-align: right;">5.27</td>
+<td style="text-align: right;">7.38</td>
+<td style="text-align: right;">10.35</td>
 <td style="text-align: right;">36.83</td>
 <td style="text-align: left;">▇▃▁▁▁</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Ly</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
-<td style="text-align: right;">2.41</td>
-<td style="text-align: right;">2.53</td>
-<td style="text-align: right;">0.46</td>
+<td style="text-align: right;">2.05</td>
+<td style="text-align: right;">1.87</td>
+<td style="text-align: right;">0.30</td>
 <td style="text-align: right;">0.94</td>
-<td style="text-align: right;">1.58</td>
-<td style="text-align: right;">2.88</td>
+<td style="text-align: right;">1.72</td>
+<td style="text-align: right;">2.51</td>
 <td style="text-align: right;">15.15</td>
 <td style="text-align: left;">▇▁▁▁▁</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Mo</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
-<td style="text-align: right;">1.22</td>
-<td style="text-align: right;">5.38</td>
+<td style="text-align: right;">0.54</td>
+<td style="text-align: right;">0.34</td>
 <td style="text-align: right;">0.01</td>
-<td style="text-align: right;">0.25</td>
-<td style="text-align: right;">0.49</td>
-<td style="text-align: right;">0.71</td>
-<td style="text-align: right;">41.03</td>
-<td style="text-align: left;">▇▁▁▁▁</td>
+<td style="text-align: right;">0.33</td>
+<td style="text-align: right;">0.50</td>
+<td style="text-align: right;">0.70</td>
+<td style="text-align: right;">1.94</td>
+<td style="text-align: left;">▅▇▂▁▁</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">Eo</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
-<td style="text-align: right;">0.58</td>
-<td style="text-align: right;">2.42</td>
+<td style="text-align: right;">0.37</td>
+<td style="text-align: right;">1.78</td>
 <td style="text-align: right;">0.00</td>
-<td style="text-align: right;">0.03</td>
-<td style="text-align: right;">0.10</td>
-<td style="text-align: right;">0.29</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">0.21</td>
 <td style="text-align: right;">18.31</td>
 <td style="text-align: left;">▇▁▁▁▁</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">Ba</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
@@ -601,84 +530,277 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
 <td style="text-align: right;">0.01</td>
 <td style="text-align: right;">0.02</td>
 <td style="text-align: right;">0.04</td>
-<td style="text-align: right;">0.18</td>
-<td style="text-align: left;">▇▃▁▁▁</td>
+<td style="text-align: right;">0.20</td>
+<td style="text-align: left;">▇▂▁▁▁</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">HGB</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
+<td style="text-align: right;">13.27</td>
+<td style="text-align: right;">2.48</td>
+<td style="text-align: right;">6.20</td>
+<td style="text-align: right;">12.00</td>
 <td style="text-align: right;">13.30</td>
-<td style="text-align: right;">3.00</td>
-<td style="text-align: right;">5.80</td>
-<td style="text-align: right;">12.40</td>
-<td style="text-align: right;">13.40</td>
-<td style="text-align: right;">15.00</td>
+<td style="text-align: right;">14.88</td>
 <td style="text-align: right;">19.60</td>
-<td style="text-align: left;">▂▂▇▇▂</td>
+<td style="text-align: left;">▁▂▇▆▁</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">HCT</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
-<td style="text-align: right;">39.60</td>
-<td style="text-align: right;">8.83</td>
-<td style="text-align: right;">17.00</td>
+<td style="text-align: right;">39.77</td>
+<td style="text-align: right;">7.38</td>
+<td style="text-align: right;">20.20</td>
 <td style="text-align: right;">36.70</td>
-<td style="text-align: right;">40.80</td>
-<td style="text-align: right;">44.80</td>
+<td style="text-align: right;">40.20</td>
+<td style="text-align: right;">44.20</td>
 <td style="text-align: right;">56.70</td>
-<td style="text-align: left;">▂▂▇▇▂</td>
+<td style="text-align: left;">▂▂▇▆▂</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">PLT</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
-<td style="text-align: right;">273.58</td>
-<td style="text-align: right;">112.00</td>
-<td style="text-align: right;">5.00</td>
-<td style="text-align: right;">197.00</td>
-<td style="text-align: right;">279.00</td>
-<td style="text-align: right;">346.00</td>
+<td style="text-align: right;">280.85</td>
+<td style="text-align: right;">99.74</td>
+<td style="text-align: right;">56.00</td>
+<td style="text-align: right;">218.25</td>
+<td style="text-align: right;">279.50</td>
+<td style="text-align: right;">340.75</td>
 <td style="text-align: right;">589.00</td>
-<td style="text-align: left;">▂▆▇▃▁</td>
+<td style="text-align: left;">▂▇▇▂▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MPV</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">9.44</td>
+<td style="text-align: right;">1.86</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">9.03</td>
+<td style="text-align: right;">9.50</td>
+<td style="text-align: right;">10.10</td>
+<td style="text-align: right;">12.70</td>
+<td style="text-align: left;">▁▁▁▇▃</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">MPV</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0.98</td>
-<td style="text-align: right;">9.75</td>
-<td style="text-align: right;">1.01</td>
-<td style="text-align: right;">7.90</td>
-<td style="text-align: right;">9.20</td>
-<td style="text-align: right;">9.50</td>
-<td style="text-align: right;">10.22</td>
-<td style="text-align: right;">12.70</td>
-<td style="text-align: left;">▃▇▃▁▁</td>
+<td style="text-align: left;">IgE</td>
+<td style="text-align: right;">104</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">242.36</td>
+<td style="text-align: right;">124.73</td>
+<td style="text-align: right;">154.17</td>
+<td style="text-align: right;">198.27</td>
+<td style="text-align: right;">242.36</td>
+<td style="text-align: right;">286.46</td>
+<td style="text-align: right;">330.56</td>
+<td style="text-align: left;">▇▁▁▁▇</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">NLR</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">7.31</td>
+<td style="text-align: right;">8.84</td>
+<td style="text-align: right;">0.11</td>
+<td style="text-align: right;">2.44</td>
+<td style="text-align: right;">4.93</td>
+<td style="text-align: right;">8.70</td>
+<td style="text-align: right;">60.74</td>
+<td style="text-align: left;">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MLR</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.39</td>
+<td style="text-align: right;">0.34</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.17</td>
+<td style="text-align: right;">0.29</td>
+<td style="text-align: right;">0.51</td>
+<td style="text-align: right;">1.84</td>
+<td style="text-align: left;">▇▃▁▁▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BLR</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.15</td>
+<td style="text-align: left;">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ELR</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.15</td>
+<td style="text-align: right;">0.32</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: right;">0.15</td>
+<td style="text-align: right;">1.89</td>
+<td style="text-align: left;">▇▁▁▁▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ENR</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.14</td>
+<td style="text-align: right;">1.10</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">11.30</td>
+<td style="text-align: left;">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">EMR</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">18.35</td>
+<td style="text-align: right;">177.79</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.18</td>
+<td style="text-align: right;">0.37</td>
+<td style="text-align: right;">1831.00</td>
+<td style="text-align: left;">▇▁▁▁▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">BER</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.96</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">NaN</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.10</td>
+<td style="text-align: right;">0.24</td>
+<td style="text-align: right;">0.57</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: left;">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PLR</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">208.77</td>
+<td style="text-align: right;">161.37</td>
+<td style="text-align: right;">9.04</td>
+<td style="text-align: right;">114.93</td>
+<td style="text-align: right;">163.46</td>
+<td style="text-align: right;">239.03</td>
+<td style="text-align: right;">1051.79</td>
+<td style="text-align: left;">▇▃▁▁▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">MPR</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.20</td>
+<td style="text-align: left;">▇▃▁▁▁</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">MPVLR</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">7.87</td>
+<td style="text-align: right;">6.22</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">3.65</td>
+<td style="text-align: right;">5.63</td>
+<td style="text-align: right;">10.84</td>
+<td style="text-align: right;">32.00</td>
+<td style="text-align: left;">▇▃▂▁▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">SII</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">1994.96</td>
+<td style="text-align: right;">3146.40</td>
+<td style="text-align: right;">14.65</td>
+<td style="text-align: right;">614.84</td>
+<td style="text-align: right;">1345.52</td>
+<td style="text-align: right;">2350.02</td>
+<td style="text-align: right;">27872.32</td>
+<td style="text-align: left;">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SIRI</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">3.96</td>
+<td style="text-align: right;">5.82</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.94</td>
+<td style="text-align: right;">2.19</td>
+<td style="text-align: right;">4.55</td>
+<td style="text-align: right;">36.91</td>
+<td style="text-align: left;">▇▁▁▁▁</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">AISI</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">1248.78</td>
+<td style="text-align: right;">2691.91</td>
+<td style="text-align: right;">0.15</td>
+<td style="text-align: right;">248.00</td>
+<td style="text-align: right;">540.96</td>
+<td style="text-align: right;">1119.34</td>
+<td style="text-align: right;">21740.41</td>
+<td style="text-align: left;">▇▁▁▁▁</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">HPR</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.03</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.04</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.06</td>
+<td style="text-align: right;">0.26</td>
+<td style="text-align: left;">▇▂▁▁▁</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="do">## TBL Summary without No, Nama, MR, skin and IgE</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>data_clean[, <span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">13</span>,<span class="dv">27</span>)] <span class="sc">%&gt;%</span> tbl_summary</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="nelxjaugkf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#nelxjaugkf table {
+<div id="apodlkstti" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#apodlkstti table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#nelxjaugkf thead, #nelxjaugkf tbody, #nelxjaugkf tfoot, #nelxjaugkf tr, #nelxjaugkf td, #nelxjaugkf th {
+#apodlkstti thead, #apodlkstti tbody, #apodlkstti tfoot, #apodlkstti tr, #apodlkstti td, #apodlkstti th {
   border-style: none;
 }
 
-#nelxjaugkf p {
+#apodlkstti p {
   margin: 0;
   padding: 0;
 }
 
-#nelxjaugkf .gt_table {
+#apodlkstti .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -704,12 +826,12 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   border-left-color: #D3D3D3;
 }
 
-#nelxjaugkf .gt_caption {
+#apodlkstti .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#nelxjaugkf .gt_title {
+#apodlkstti .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -721,7 +843,7 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   border-bottom-width: 0;
 }
 
-#nelxjaugkf .gt_subtitle {
+#apodlkstti .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -733,7 +855,7 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   border-top-width: 0;
 }
 
-#nelxjaugkf .gt_heading {
+#apodlkstti .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -745,13 +867,13 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   border-right-color: #D3D3D3;
 }
 
-#nelxjaugkf .gt_bottom_border {
+#apodlkstti .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#nelxjaugkf .gt_col_headings {
+#apodlkstti .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -766,7 +888,7 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   border-right-color: #D3D3D3;
 }
 
-#nelxjaugkf .gt_col_heading {
+#apodlkstti .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -786,7 +908,7 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   overflow-x: hidden;
 }
 
-#nelxjaugkf .gt_column_spanner_outer {
+#apodlkstti .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -798,15 +920,15 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   padding-right: 4px;
 }
 
-#nelxjaugkf .gt_column_spanner_outer:first-child {
+#apodlkstti .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#nelxjaugkf .gt_column_spanner_outer:last-child {
+#apodlkstti .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#nelxjaugkf .gt_column_spanner {
+#apodlkstti .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -818,11 +940,11 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   width: 100%;
 }
 
-#nelxjaugkf .gt_spanner_row {
+#apodlkstti .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#nelxjaugkf .gt_group_heading {
+#apodlkstti .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -848,7 +970,7 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   text-align: left;
 }
 
-#nelxjaugkf .gt_empty_group_heading {
+#apodlkstti .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -863,15 +985,15 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   vertical-align: middle;
 }
 
-#nelxjaugkf .gt_from_md > :first-child {
+#apodlkstti .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#nelxjaugkf .gt_from_md > :last-child {
+#apodlkstti .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#nelxjaugkf .gt_row {
+#apodlkstti .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -890,7 +1012,7 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   overflow-x: hidden;
 }
 
-#nelxjaugkf .gt_stub {
+#apodlkstti .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -903,7 +1025,7 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   padding-right: 5px;
 }
 
-#nelxjaugkf .gt_stub_row_group {
+#apodlkstti .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -917,15 +1039,15 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   vertical-align: top;
 }
 
-#nelxjaugkf .gt_row_group_first td {
+#apodlkstti .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#nelxjaugkf .gt_row_group_first th {
+#apodlkstti .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#nelxjaugkf .gt_summary_row {
+#apodlkstti .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -935,16 +1057,16 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   padding-right: 5px;
 }
 
-#nelxjaugkf .gt_first_summary_row {
+#apodlkstti .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#nelxjaugkf .gt_first_summary_row.thick {
+#apodlkstti .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#nelxjaugkf .gt_last_summary_row {
+#apodlkstti .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -954,7 +1076,7 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   border-bottom-color: #D3D3D3;
 }
 
-#nelxjaugkf .gt_grand_summary_row {
+#apodlkstti .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -964,7 +1086,7 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   padding-right: 5px;
 }
 
-#nelxjaugkf .gt_first_grand_summary_row {
+#apodlkstti .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -974,7 +1096,7 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   border-top-color: #D3D3D3;
 }
 
-#nelxjaugkf .gt_last_grand_summary_row_top {
+#apodlkstti .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -984,11 +1106,11 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   border-bottom-color: #D3D3D3;
 }
 
-#nelxjaugkf .gt_striped {
+#apodlkstti .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#nelxjaugkf .gt_table_body {
+#apodlkstti .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -997,7 +1119,7 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   border-bottom-color: #D3D3D3;
 }
 
-#nelxjaugkf .gt_footnotes {
+#apodlkstti .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1011,7 +1133,7 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   border-right-color: #D3D3D3;
 }
 
-#nelxjaugkf .gt_footnote {
+#apodlkstti .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1020,7 +1142,7 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   padding-right: 5px;
 }
 
-#nelxjaugkf .gt_sourcenotes {
+#apodlkstti .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1034,7 +1156,7 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   border-right-color: #D3D3D3;
 }
 
-#nelxjaugkf .gt_sourcenote {
+#apodlkstti .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1042,72 +1164,72 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
   padding-right: 5px;
 }
 
-#nelxjaugkf .gt_left {
+#apodlkstti .gt_left {
   text-align: left;
 }
 
-#nelxjaugkf .gt_center {
+#apodlkstti .gt_center {
   text-align: center;
 }
 
-#nelxjaugkf .gt_right {
+#apodlkstti .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#nelxjaugkf .gt_font_normal {
+#apodlkstti .gt_font_normal {
   font-weight: normal;
 }
 
-#nelxjaugkf .gt_font_bold {
+#apodlkstti .gt_font_bold {
   font-weight: bold;
 }
 
-#nelxjaugkf .gt_font_italic {
+#apodlkstti .gt_font_italic {
   font-style: italic;
 }
 
-#nelxjaugkf .gt_super {
+#apodlkstti .gt_super {
   font-size: 65%;
 }
 
-#nelxjaugkf .gt_footnote_marks {
+#apodlkstti .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#nelxjaugkf .gt_asterisk {
+#apodlkstti .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#nelxjaugkf .gt_indent_1 {
+#apodlkstti .gt_indent_1 {
   text-indent: 5px;
 }
 
-#nelxjaugkf .gt_indent_2 {
+#apodlkstti .gt_indent_2 {
   text-indent: 10px;
 }
 
-#nelxjaugkf .gt_indent_3 {
+#apodlkstti .gt_indent_3 {
   text-indent: 15px;
 }
 
-#nelxjaugkf .gt_indent_4 {
+#apodlkstti .gt_indent_4 {
   text-indent: 20px;
 }
 
-#nelxjaugkf .gt_indent_5 {
+#apodlkstti .gt_indent_5 {
   text-indent: 25px;
 }
 
-#nelxjaugkf .katex-display {
+#apodlkstti .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#nelxjaugkf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#apodlkstti div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1120,13 +1242,13 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
 <thead>
 <tr class="gt_col_headings header">
 <th id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Characteristic</strong></th>
-<th id="stat_0" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>N = 57</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+<th id="stat_0" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>N = 106</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">Usia</td>
-<td class="gt_row gt_center" headers="stat_0">32 (25, 47)</td>
+<td class="gt_row gt_center" headers="stat_0">33 (25, 51)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">Gender</td>
@@ -1135,20 +1257,11 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;L</td>
-<td class="gt_row gt_center" headers="stat_0">27 (47%)</td>
+<td class="gt_row gt_center" headers="stat_0">52 (49%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;P</td>
-<td class="gt_row gt_center" headers="stat_0">30 (53%)</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">inc_exc</td>
-<td class="gt_row gt_center" headers="stat_0"><br>
-</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Include</td>
-<td class="gt_row gt_center" headers="stat_0">57 (100%)</td>
+<td class="gt_row gt_center" headers="stat_0">54 (51%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">Diagnosis</td>
@@ -1157,368 +1270,601 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;1. REAKSI ANAFILAKSIS EC SUSP FOOD PRODUCT (IKAN TUNA)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Obs syok ec susp anafilaksis (ec susp levofloksasin) + septik</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Erupsi Obat Makulopapular et kausa Suspek Fenitoin dd/ Pirazinamid dd/ Diazepam</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;food_nonspesific</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;insect_bite</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Obs reaksi hipersentivitas akut ec susp drug induced (Ibuprofen, Parasetamol)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Obs syok anaphylaksis H2 ec susp drug induced (cefadroxil dd demacolin dd ambroxol) dd food</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Obs urtikaria akut ec susp tungau debu dd suhu dingin</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;REAKASI HIPERSENSITIVITAS AKUT H3 EC DRUG INDUCED (AMOKSISILIN)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Anafilaksis</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis derajat berat ec susp food (udang)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis ec susp obat (Paracetamol, Pseudoephedrine HCl Diphenhydramine HCl, phenylephrine HCl, dan chlorpheniramine maleate)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis ec drug induced (ibuprofen)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Anafilaksis ec susp drug induce (membaik)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;REAKSI ANAFILAKSIS AKUT H-4 EC SUSP DURG INDUCED (ASETILSALICYLIC ACID , RAMIPRIL)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis derajat berat ec susp food (udang)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis ec insect bite</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Anafilaksis ec Produk Darah</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis ec susp bulu anjing dd food (udang)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis ec susp bulu anjing dd food (udang)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Anafilaksis ec susp drug (Metronidazole dd/ Ceftriaxone) dd/ food (telur) (membaik)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Anafilaksis ec susp drug (Metronidazole dd/ Ceftriaxone) dd/ food (telur) (membaik)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;REAKSI ANAFILAKSIS EC SUSP DRUG (NATRIUM DICLOFENAC) DD FOOD</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis ec susp drug induce (Ceftraxone)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis ec susp drug induced (ceftriaxone)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis ec susp drug induced (Ceftriaxone)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;REAKSI ANAFILAKSIS EC SUSP DRUG NSAIDS (CELECOXIB) DD FOOD</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis ec susp food allergy dd drug</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis ec susp food dd suhu</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis ec susp food induced</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Anafilaksis ec susp food induced (matcha dd ayam)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis ec susp food product (terasi)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;⁠Reaksi Anafilaksis ec susp Insect Bite</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis ec susp kontras</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis ec susp makanan</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis ec susp kontras</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis ec susp makanan</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis ec susp makanan dd suhu (dingin)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaksis ec susp obat (seftriakson)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;⁠Reaksi anafilaksis H2 ec susp Food (ikan)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;REAKSI ANAFILAKTIK</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaktik akut ec susp makanan</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaktik ec susp drug induced</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaktik ec susp food (curiga seafood)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaktik ec susp food (lawar lebah)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaktik ec susp makanan (telor bebek)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Anafilaktik ec susp obat</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaktik ec susp makanan (telor bebek)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Anafilaktik ec susp obat</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;⁠REAKSI ANAFILAKTIK EC SUSP TELUR/UDANG</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi anafilaktik ec susp. drug (n-asetilisistein)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Anafilaktik ec suspek drug (Ceftriaxon)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Anafilkasis akut ec susp drug induced (amoxicillin, parasetamol, beneuron, guaifenesin)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi analfiksasi ec susp makanan (ayam dan tempe )</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitifitas</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Hipersensitifitas Akut (Tolak Angin, Bye Bye Fever)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;reaksi hipersensitifitas ec obat</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivas akut H-2 ec susp food induced</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;reaksi hipersensitivitas</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Hipersensitivitas ec susp food ( udang)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas Acute H2 ec susp obat (parasetamol) dd suhu dd food</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Hipersensitivitas akut ec susp suhu (dingin) dd food</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas akut ec drug induced (ciprofloxacin)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Hipersensitivitas Akut ec Omeprazole + Ondansentron</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas akut ec parasetamol dan ibuprofen</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas akut ec susp drug ( Ceftriaxone )</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Hipersensitivitas akut ec susp drug (asetilsistein IV)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas akut ec susp drug (ceftriaxon, parasetamol) dd food</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas akut ec susp drug induced (cetirizine dd susp Tungau/Kutu)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas akut ec susp food dd obat?</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas akut ec susp drug induced (cetirizine dd susp Tungau/Kutu)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas akut ec susp Drug induced (Seftriakson)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Hipersensitivitas akut ec susp Drug induced (Seftriakson)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas akut ec susp food dd obat?</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas akut ec susp food dd suhu</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas akut ec susp food induced (seafood)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Hipersensitivitas Akut ec susp food intake</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Hipersensitivitas Akut ec Susp Insect Bite</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas akut ec susp makanan (Kepiting)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas akut ec susp obat (asetosal, ticagrelol, ramipril, candesartan, bisoprolol, atorvastatin, lansoprazole)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas akut ec susp obat (Ibuprofen dd/ Paracetamol)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas akut ec susp obat (parasetamol, vermint)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas akut ec suspect drug (kapsul dan jamu pegel linu)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Hipersensitivitas e.c susp drug eruption</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas ec drug induced (ranitidin)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;reaksi hipersensitivitas ec Drug reaction ( Ceftriaxone )</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;⁠Reaksi Hipersensitivitas ec drug reaction (ceftriaxone)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas ec obat (susp ketorolac, omeprazole, paracetamol) (membaik)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas ec susp drug (parasetamol)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas ec susp drug (seftriaxone)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas ec susp drug dd food</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas ec susp drug induced</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Hipersensitivitas ec susp Drug Induced (Natrium diklofenak dd/ Cefadroksil)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;REAKSI HIPERSENSITIVITAS EC SUSP DRUG INDUCED (PARASETAMOL, KODEIN) DD FOOD INDUCED</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas ec susp food</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas ec susp obat (Piroxicam dd Metampiron dd amoxicilin)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas ec susp food (udang)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas H5 ec susp drug (Cefixim, Parasetamol, ondansentron, omeprazole, azitromisin) (membaik)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas ec susp obat (Piroxicam dd Metampiron dd amoxicilin)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi hipersensitivitas H5 ec susp drug (Cefixim, Parasetamol, ondansentron, omeprazole, azitromisin) (membaik)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Hipersensivitas Akut ec susp. suhu dd/ Stressor</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi Hipersensivitias Akut ec Susp Drug Induced (Contrast)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;REAKSI HIPERSENTIVITAS EC SUSP MAKANAN (TERASI ? UDANG?)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Riw. reaksi hipersensitivitas akut ec susp contrast agent (IOPROMID) (ULTRAVIST)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Stephen Johnson Syndrome</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Susp generalized makulopapular drug eruption</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Susp Hereditary Angioedema dd Viral Induced Urticaria</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Suspek Drug-Induced Pemphigus dd/ Drug-Induced Bullous Pemphigoid et kausa suspek Cephalosporin (Ceftazidim, Ceftriaxone) Levofloksasin, Furosemid, Allopurinol dd/ Pemfigus Paraneoplastik dd/ Suspek Bullous Systemic Lupus Eritematosus ( membaik )</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Syok anafilaksis</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Syok anafilaksis (membaik) hari 2 ec susp Metamizole&nbsp;</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Syok Anafilaksis ec susp drug induced (amoxicilin dan asam mefenamat)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Syok anafilaksis ec susp drug induced (aspilet dd furosemid dd obat anestesi)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Syok anafilaksis ec susp drug induced (loperamide) (membaik)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Syok Anafilaksis ec susp drug induced (susp cefazolin dd/ analgetik?) dd/ food (membaik)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Syok anafilaksis ec susp food induced (ikan pindang)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Syok anafilaksis ec susp insect bite (membaik)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Syok anafilaktik (delayed onset) ec susp insect bite dd latex</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Syok Anafilaktik ec Drug (Ibuprofen)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Syok anafilaktik ec susp kontras</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Syok ec susp anafilaksis ec susp drug (penisilin)</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Syok ec susp septik dd anafilaktik dd hipovolemik</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Syok ec susp septik dd anafilaktik dd hipovolemik</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">Inducer</td>
 <td class="gt_row gt_center" headers="stat_0"><br>
 </td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;amoksisilin</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;ayam, tempe</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Blood_Product</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;asam_mefenamat</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Bulu Anjing, Udang</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;aspirin</td>
+<td class="gt_row gt_center" headers="stat_0">3 (2.8%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;cefadroksil</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;ayam</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;bulu_anjing</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;celecoxib</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Contrast</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Debu</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Drug</td>
-<td class="gt_row gt_center" headers="stat_0">11 (19%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;dexketoprofen</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Food</td>
-<td class="gt_row gt_center" headers="stat_0">9 (16%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;diklofenak</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;drug_nonspecific</td>
+<td class="gt_row gt_center" headers="stat_0">3 (2.8%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;food_nonspecific</td>
+<td class="gt_row gt_center" headers="stat_0">6 (5.7%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;herbal</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;ibuprofen</td>
+<td class="gt_row gt_center" headers="stat_0">6 (5.7%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Ikan</td>
-<td class="gt_row gt_center" headers="stat_0">3 (5.3%)</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Ikan Tuna</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;insect bite</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Insect Bite</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Insect_bite</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Insent_bite</td>
-<td class="gt_row gt_center" headers="stat_0">2 (3.5%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;insect_bite</td>
+<td class="gt_row gt_center" headers="stat_0">5 (4.7%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Kepiting</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Kontras</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;ketorolak</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;kotrimoksasol</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;kontras</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;lansoprazole, ketorolac</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;lawar_lebah</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Levofloksasin</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;loperamid</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Metamizole</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;metamizole</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sefadroksil</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;n-asetilsistein</td>
+<td class="gt_row gt_center" headers="stat_0">3 (2.8%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;sefiksim</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;OAT</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;sefiksim, dexketoprofen</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;omeprazole</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Seftriakson</td>
-<td class="gt_row gt_center" headers="stat_0">2 (3.5%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;parasetamol</td>
+<td class="gt_row gt_center" headers="stat_0">8 (7.5%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;penisilin</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;piroksikam</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Ranitidin</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Seafood</td>
+<td class="gt_row gt_center" headers="stat_0">5 (4.7%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;sefalosporin</td>
+<td class="gt_row gt_center" headers="stat_0">22 (21%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;siprofloksasin</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;suhu</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">4 (3.8%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Suhu</td>
-<td class="gt_row gt_center" headers="stat_0">2 (3.5%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;telur</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Telur,udang</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
-</tr>
-<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Terasi</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Terasi udang</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Tolak angin,</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Tuna</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Tungau</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;udang</td>
-<td class="gt_row gt_center" headers="stat_0">2 (3.5%)</td>
+<td class="gt_row gt_center" headers="stat_0">6 (5.7%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">Grp_inducer</td>
+<td class="gt_row gt_center" headers="stat_0"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Drugs</td>
+<td class="gt_row gt_center" headers="stat_0">67 (63%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Food</td>
+<td class="gt_row gt_center" headers="stat_0">28 (26%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Others</td>
+<td class="gt_row gt_center" headers="stat_0">11 (10%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">Komorbid</td>
@@ -1527,272 +1873,472 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;abses retrofaring</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;ACKD</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;acute febrile illness</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Acute febrile illness</td>
-<td class="gt_row gt_center" headers="stat_0">2 (3.5%)</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Adenocarcinoma Paru, pathological fracture</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Adenoma Hipofisis</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Afektif Bipolar</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;ADHF</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;AML, Sepsis, AKI</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Afektif Bipolar</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Anemia Aplastik</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Ankilosing Spondilitis</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;ankle sprain</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;artralgia</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Asma</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;asma eksaserbasi akut</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Asma intermitent</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;BPPV, CKR,</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;CAD</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;CAP</td>
-<td class="gt_row gt_center" headers="stat_0">2 (3.5%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;CAD</td>
+<td class="gt_row gt_center" headers="stat_0">3 (2.8%)</td>
 </tr>
 <tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;CAP</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;CAP, susp TB, DM</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Carcinoma Ovarium</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;CHF</td>
-<td class="gt_row gt_center" headers="stat_0">2 (3.5%)</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;CKD Stage V</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;CKD, CHF, DM</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Dengue</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;DM</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;DM tipe 2</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;DM tipe 2, Obesitas, HHD, Anemia, Charcot foot</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;DM, ACKD</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;DM, CKD</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Gastroenteritis akut</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Hemangioblastoma</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Ginggivitis</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;gravida</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Gravida</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Hemangioblastoma</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Hepatitis</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;HHD</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Hiperglikemia</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;hipertensi</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;hipokalemia</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;HIV, meningitis</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;HT, ACKD</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;ISK, ACKD</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;ISPA</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;ISPA</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Kalkulus Kolesistitis</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;karies, SCC lidah</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;KNF</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Kolesistitis</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;NSTEMI</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;NSTEMI, ACKD</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;NSTEMI, AKI</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;PPOK stabil</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Renal cell carcinoma</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sepsis, DM tipe 2, DMDF</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;sifilis</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;SLE</td>
+<td class="gt_row gt_center" headers="stat_0">3 (2.8%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;SNH, CKD</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;STEMI</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;SVT, Aortic Dissection, AKI</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;TB Paru, CKD St III B</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;tidak ada</td>
-<td class="gt_row gt_center" headers="stat_0">23 (40%)</td>
+<td class="gt_row gt_center" headers="stat_0">36 (34%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Tidak ada</td>
-<td class="gt_row gt_center" headers="stat_0">2 (3.5%)</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Typhoid</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">RF</td>
 <td class="gt_row gt_center" headers="stat_0"><br>
 </td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;- Salbutamol tablet reaksi bengkak - Asap dan debu - Pain killer kecuali paracetamol</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi antibiotik</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi antinyeri</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi debu</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi debu, asma</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi dingin</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Alergi ikan tuna</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi fenitoin</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Alergi NSAID</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Alergi ikan tuna</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi kontras</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Alergi makanan laut</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Alergi NSAID</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi obat</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi obat ibuprofen</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi obat multipel</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Alergi Obat, makanan</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Alergi obat: ibuprofen, mefinal, salbutamol</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Alergi obat: Obat Ketorolac dan Ibuprofen</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi obat: Torasic, pelatin, Ceftriaxon, aspirin, buscopan, metampiron, seafood</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi penisilin</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi seafood</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi suhu panas</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi sulfa, ibuprofen</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi telur, udang</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi udang</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi udang alergi obat ibuprofen</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi Udang, ketorolak, MST, Natrium diklofenak, dexketoprofen</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi udang, seafood</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;alergi udang, siprofloksasin, amoksisilin, azitromisin, parasetamol, antalgin</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Amoksisilin</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;ARF</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Asma intermitent</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;autoimin</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;autoimun</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Autoimun</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Ca cervix</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;CHF</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Ciprofloxacin, Paramex, Bodrex, Intunal,, bye bye fever</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;DM</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Gravida</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;HIV</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;HIV, meningitis</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;ikan</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Ikan Tuna</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;ikan</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Ikan Tuna</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;levofloksasin, debu, lateks, seafood, telur</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;multipel drug alergy</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;multipel drug allergy</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;other alergy</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Riwayat alergi Ibuprofen, Asam mefenamat</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;SLE</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Riwayat alergi Gin</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;seafood</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Stress, suhu panas</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;suhu dingin</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;suhu panas, udang</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;suhu, udang, dan ikan</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;tidak ada</td>
-<td class="gt_row gt_center" headers="stat_0">21 (37%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Tidak ada</td>
-<td class="gt_row gt_center" headers="stat_0">3 (5.3%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;tidak ada</td>
+<td class="gt_row gt_center" headers="stat_0">45 (42%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;TIdak ada</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Tidak ada</td>
+<td class="gt_row gt_center" headers="stat_0">3 (2.8%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">Infection</td>
@@ -1801,99 +2347,293 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;ada</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Bacterial Infection</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;CAP</td>
-<td class="gt_row gt_center" headers="stat_0">5 (8.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">5 (4.7%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;CAP, susp TB</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;CRBSI</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;dengie</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Dengue</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Diarhea</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;DMDF</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;ginggivitis</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;gingivitis</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;HIV, meningitis</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;ISK</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">5 (4.7%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;ISPA</td>
-<td class="gt_row gt_center" headers="stat_0">2 (3.5%)</td>
+<td class="gt_row gt_center" headers="stat_0">6 (5.7%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;karies gigi</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;kolesistitis</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Kolesistitis</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;LRTI</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;other alergy</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Osteomyelitis</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Pneumonia</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;pyelonefritis akut</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Selulitis Cruris</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;sifilis</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Sinusitis</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;SSTI</td>
-<td class="gt_row gt_center" headers="stat_0">2 (3.5%)</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Susp Dengue</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Susp Thyphoid Fever</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;TB paru</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;thypoid</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;tidak</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;tidak ada</td>
-<td class="gt_row gt_center" headers="stat_0">27 (47%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Tidak ada</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;tidak ada</td>
+<td class="gt_row gt_center" headers="stat_0">46 (43%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Tidak ada</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;TIdak ada</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Typhoid Fever</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;viral</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Viral</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;viral infection</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Viral infection</td>
-<td class="gt_row gt_center" headers="stat_0">4 (7.0%)</td>
+<td class="gt_row gt_center" headers="stat_0">5 (4.7%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Viral Infection</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Virus</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">Onset_jam</td>
-<td class="gt_row gt_center" headers="stat_0">1.00 (0.50, 3.00)</td>
+<td class="gt_row gt_center" headers="stat_0">1.00 (0.50, 2.00)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
-<td class="gt_row gt_center" headers="stat_0">1</td>
+<td class="gt_row gt_left" headers="label">Alergy_Dx</td>
+<td class="gt_row gt_center" headers="stat_0"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi_anafilaksis</td>
+<td class="gt_row gt_center" headers="stat_0">40 (38%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Reaksi_hipersensitivitas</td>
+<td class="gt_row gt_center" headers="stat_0">54 (51%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Syok_anafilaksis</td>
+<td class="gt_row gt_center" headers="stat_0">12 (11%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">Skin</td>
+<td class="gt_row gt_center" headers="stat_0"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;bercak kemerahan</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Eritem makulopapular</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;erosi multipel</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;gatal</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Gatal, ruam, bengkak mata</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;maculapapula</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;makula hiperemis</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;makula papula hiperemis</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;makulopapular</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Makulopapular</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Mata bengkak, kulit kemerahan</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;palpebral edema</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;palpebral edema, oral edema</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Palpebral edema, urtikaria</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;pemfigus</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;priuritus</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Ruam, gatal</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;tidak ada</td>
+<td class="gt_row gt_center" headers="stat_0">3 (2.8%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;urtika</td>
+<td class="gt_row gt_center" headers="stat_0">8 (7.5%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;urtika, edema palpebra</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;urtikaria</td>
+<td class="gt_row gt_center" headers="stat_0">67 (63%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Urtikaria</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;urtikaria, edema oris dan palebra</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;urtikaria, eritema</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Urtikaria, makulopapular</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Urtikaria, palpebral edema</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">GIT</td>
@@ -1902,47 +2642,55 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Diarhea</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;dispepsia</td>
+<td class="gt_row gt_center" headers="stat_0">3 (2.8%)</td>
+</tr>
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;dispnea</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;dyspepsia</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;kolik</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Kolik</td>
-<td class="gt_row gt_center" headers="stat_0">2 (3.5%)</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;kolik abdomen</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;nausea</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;nausea vomiting</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;nauusea vomiting</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;tidak ada</td>
-<td class="gt_row gt_center" headers="stat_0">45 (79%)</td>
+<td class="gt_row gt_center" headers="stat_0">91 (86%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Tidak ada</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Vomiting</td>
-<td class="gt_row gt_center" headers="stat_0">2 (3.5%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">Pulmo</td>
@@ -1951,104 +2699,205 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;dispnea</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Dyspnea</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;laringospasme</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;sesak</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;tidak ada</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;tidak ada</td>
-<td class="gt_row gt_center" headers="stat_0">39 (68%)</td>
+<td class="gt_row gt_center" headers="stat_0">72 (68%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;wheezing</td>
-<td class="gt_row gt_center" headers="stat_0">13 (23%)</td>
+<td class="gt_row gt_center" headers="stat_0">26 (25%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Wheezing</td>
-<td class="gt_row gt_center" headers="stat_0">2 (3.5%)</td>
+<td class="gt_row gt_center" headers="stat_0">2 (1.9%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;wheezing, laringeal edema</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">Cardiovascular</td>
 <td class="gt_row gt_center" headers="stat_0"><br>
 </td>
 </tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;hipotensi</td>
+<td class="gt_row gt_center" headers="stat_0">7 (6.6%)</td>
+</tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;12.99</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;palpitasi</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;shock</td>
-<td class="gt_row gt_center" headers="stat_0">5 (8.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">4 (3.8%)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Shock</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;tidak ada</td>
-<td class="gt_row gt_center" headers="stat_0">47 (82%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;tidak ada</td>
+<td class="gt_row gt_center" headers="stat_0">87 (82%)</td>
+</tr>
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Tidak ada</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;TIdak ada</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;tidak daa</td>
-<td class="gt_row gt_center" headers="stat_0">1 (1.8%)</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;tidak dada</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
 </tr>
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;tidakd ada</td>
+<td class="gt_row gt_center" headers="stat_0">1 (0.9%)</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">WBC</td>
-<td class="gt_row gt_center" headers="stat_0">10 (8, 14)</td>
+<td class="gt_row gt_center" headers="stat_0">10.1 (7.5, 13.8)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">Ne</td>
-<td class="gt_row gt_center" headers="stat_0">7.6 (5.0, 10.8)</td>
+<td class="gt_row gt_center" headers="stat_0">7.4 (5.3, 10.4)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="label">Ly</td>
-<td class="gt_row gt_center" headers="stat_0">1.58 (0.94, 2.88)</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">Mo</td>
-<td class="gt_row gt_center" headers="stat_0">0.49 (0.25, 0.71)</td>
+<td class="gt_row gt_center" headers="stat_0">1.72 (0.94, 2.52)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">Eo</td>
-<td class="gt_row gt_center" headers="stat_0">0.10 (0.03, 0.29)</td>
+<td class="gt_row gt_left" headers="label">Mo</td>
+<td class="gt_row gt_center" headers="stat_0">0.51 (0.33, 0.70)</td>
 </tr>
 <tr class="even">
+<td class="gt_row gt_left" headers="label">Eo</td>
+<td class="gt_row gt_center" headers="stat_0">0.09 (0.02, 0.22)</td>
+</tr>
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">Ba</td>
 <td class="gt_row gt_center" headers="stat_0">0.020 (0.010, 0.040)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="label">HGB</td>
-<td class="gt_row gt_center" headers="stat_0">13.40 (12.40, 15.00)</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="label">HCT</td>
-<td class="gt_row gt_center" headers="stat_0">41 (37, 45)</td>
+<td class="gt_row gt_center" headers="stat_0">13.30 (12.00, 14.90)</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">PLT</td>
-<td class="gt_row gt_center" headers="stat_0">279 (197, 346)</td>
+<td class="gt_row gt_left" headers="label">HCT</td>
+<td class="gt_row gt_center" headers="stat_0">40 (37, 44)</td>
 </tr>
 <tr class="even">
+<td class="gt_row gt_left" headers="label">PLT</td>
+<td class="gt_row gt_center" headers="stat_0">280 (218, 341)</td>
+</tr>
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">MPV</td>
-<td class="gt_row gt_center" headers="stat_0">9.50 (9.20, 10.25)</td>
+<td class="gt_row gt_center" headers="stat_0">9.50 (9.00, 10.10)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">IgE</td>
+<td class="gt_row gt_center" headers="stat_0"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;154.17</td>
+<td class="gt_row gt_center" headers="stat_0">1 (50%)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;330.56</td>
+<td class="gt_row gt_center" headers="stat_0">1 (50%)</td>
 </tr>
 <tr class="odd">
 <td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
-<td class="gt_row gt_center" headers="stat_0">1</td>
+<td class="gt_row gt_center" headers="stat_0">104</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">NLR</td>
+<td class="gt_row gt_center" headers="stat_0">4.9 (2.4, 8.7)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">MLR</td>
+<td class="gt_row gt_center" headers="stat_0">0.29 (0.17, 0.51)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">BLR</td>
+<td class="gt_row gt_center" headers="stat_0">0.014 (0.008, 0.022)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">ELR</td>
+<td class="gt_row gt_center" headers="stat_0">0.04 (0.02, 0.15)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">ENR</td>
+<td class="gt_row gt_center" headers="stat_0">0.01 (0.00, 0.03)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">EMR</td>
+<td class="gt_row gt_center" headers="stat_0">0.18 (0.04, 0.37)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">BER</td>
+<td class="gt_row gt_center" headers="stat_0">0.24 (0.10, 0.57)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">&nbsp;&nbsp;&nbsp;&nbsp;Unknown</td>
+<td class="gt_row gt_center" headers="stat_0">4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">PLR</td>
+<td class="gt_row gt_center" headers="stat_0">163 (115, 239)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">MPR</td>
+<td class="gt_row gt_center" headers="stat_0">0.034 (0.026, 0.047)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">MPVLR</td>
+<td class="gt_row gt_center" headers="stat_0">5.6 (3.6, 10.9)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">SII</td>
+<td class="gt_row gt_center" headers="stat_0">1,346 (605, 2,357)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">SIRI</td>
+<td class="gt_row gt_center" headers="stat_0">2.2 (0.9, 4.6)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label">AISI</td>
+<td class="gt_row gt_center" headers="stat_0">541 (246, 1,121)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label">HPR</td>
+<td class="gt_row gt_center" headers="stat_0">0.050 (0.039, 0.064)</td>
 </tr>
 </tbody><tfoot>
 <tr class="gt_footnotes odd">
@@ -2058,6 +2907,935 @@ $ IgE            &lt;list&gt; &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL&gt;, &lt;NULL
 
 </table>
 
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Membuat Tabel Karakteristik (Tabel 1)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>tabel_publikasi <span class="ot">&lt;-</span> data_clean <span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Memilih variabel klinis dan lab yang relevan untuk naskah publikasi</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Pastikan membuang kolom yang kosong (Skin, IgE) dan identitas pasien</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Usia, Gender, Grp_inducer, Alergy_Dx, Onset_jam, WBC, Ne, Ly, Mo, Eo, Ba, HGB, PLT, MPV, NLR, MLR, BLR, ELR, ENR, EMR, BER, PLR, MPR, MPVLR, SII, SIRI, AISI, HPR) <span class="sc">%&gt;%</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Membangun tabel dasar gtsummary</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tbl_summary</span>(</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> Alergy_Dx, <span class="co"># Memisahkan kolom berdasarkan Gender (Laki-laki vs Perempuan)</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Menyesuaikan format pelaporan angka</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">statistic =</span> <span class="fu">list</span>(</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>      <span class="fu">all_continuous</span>() <span class="sc">~</span> <span class="st">"{median} ({p25}, {p75})"</span>, <span class="co"># Format Median (IQR) untuk numerik</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">all_categorical</span>() <span class="sc">~</span> <span class="st">"{n} ({p}%)"</span>             <span class="co"># Format n (%) untuk kategori</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Mengatur jumlah angka di belakang koma</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">digits =</span> <span class="fu">all_continuous</span>() <span class="sc">~</span> <span class="dv">2</span>,</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Mengubah teks NA/Missing value agar lebih formal</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">missing_text =</span> <span class="st">"Data Tidak Tersedia"</span>,</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Merapikan nama label agar sesuai dengan terminologi medis standar</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="fu">list</span>(</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>      Usia <span class="sc">~</span> <span class="st">"Usia (Tahun)"</span>,</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>      Gender <span class="sc">~</span> <span class="st">"Jenis Kelamin"</span>,</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>      Grp_inducer <span class="sc">~</span> <span class="st">"Kelompok Pemicu"</span>,</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>      Onset_jam <span class="sc">~</span> <span class="st">"Onset Reaksi (Jam)"</span>,</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>      WBC <span class="sc">~</span> <span class="st">"Leukosit (10^3/uL)"</span>,</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>      Ne <span class="sc">~</span> <span class="st">"Neutrofil (10^3/uL)"</span>,</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>      Ly <span class="sc">~</span> <span class="st">"limfosit (10^3/uL)"</span>,</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>      Mo <span class="sc">~</span> <span class="st">"Monosit (10^3/uL)"</span>,</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>      Eo <span class="sc">~</span> <span class="st">"Eosinofil (%)"</span>,</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>      Ba <span class="sc">~</span> <span class="st">"Basofil (10^3/uL)"</span>,</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>      HGB <span class="sc">~</span> <span class="st">"Hemoglobin (g/dL)"</span>,</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>      PLT <span class="sc">~</span> <span class="st">"Trombosit (10^3/uL)"</span>,</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>      MPV <span class="sc">~</span> <span class="st">"Mean Platelet Volume"</span>,</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>      NLR <span class="sc">~</span> <span class="st">"Rasio Neutrofil per Limfosit (NLR)"</span>,</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>      MLR <span class="sc">~</span> <span class="st">"Rasio Monosit per Limfosit (MLR)"</span>,</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>      BLR <span class="sc">~</span> <span class="st">"Rasio Basofil per Limfosit (BLR)"</span>,</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>      ELR <span class="sc">~</span> <span class="st">"Rasio Eosinofil per Limfosit (ELR)"</span>,</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>      ENR <span class="sc">~</span> <span class="st">"Rasio Eosinofil per Neutrofil (ENR)"</span>,</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>      EMR <span class="sc">~</span> <span class="st">"Rasio Eosinofil per Monosit (EMR)"</span>,</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>      BER <span class="sc">~</span> <span class="st">"Rasio Basofil per Eosinofil (BER)"</span>,</span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>      PLR <span class="sc">~</span> <span class="st">"Rasio Platelet per Limfosit (PLR)"</span>,</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>      MPR <span class="sc">~</span> <span class="st">"Rasio MPV per Platelet (MPR)"</span>,</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>      MPVLR <span class="sc">~</span> <span class="st">"Rasio MPV per Limfosit (MPVLR)"</span>,</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>      SII <span class="sc">~</span> <span class="st">"Systemic Immune-Inflamation Index (SII)"</span>,</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>      SIRI <span class="sc">~</span> <span class="st">"Systemic Inflammation Response Index (SIRI)"</span>,</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>      AISI <span class="sc">~</span> <span class="st">"Aggregate Index of Systemic Inflamation (AISI)"</span>,</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>      HPR <span class="sc">~</span> <span class="st">"Rasio Hemoglobin per Platelet (HPR)"</span></span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Menambahkan kolom Total Keseluruhan</span></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_overall</span>(<span class="at">col_label =</span> <span class="st">"**Total Pasien** </span><span class="sc">\n</span><span class="st">(N = {N})"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Menambahkan Uji Statistik (p-value otomatis membedakan parametrik/non-parametrik)</span></span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_p</span>(<span class="at">pvalue_fun =</span> <span class="sc">~</span><span class="fu">style_pvalue</span>(.x, <span class="at">digits =</span> <span class="dv">3</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Estetika tipografi untuk standar jurnal (Bold &amp; Italic)</span></span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bold_labels</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>  <span class="fu">italicize_levels</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Modifikasi Header dan Judul Tabel</span></span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>  <span class="fu">modify_header</span>(<span class="at">label =</span> <span class="st">"**Karakteristik Klinis**"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a>  <span class="fu">modify_caption</span>(<span class="st">"**Tabel 1. Karakteristik Demografi dan Laboratorium Pasien Hipersensitivitas Berdasarkan Spektrum Hipersensitivitas.**"</span>)</span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a><span class="co"># Menampilkan hasil di Viewer RStudio</span></span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>tabel_publikasi</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="ubelwntpiq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ubelwntpiq table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#ubelwntpiq thead, #ubelwntpiq tbody, #ubelwntpiq tfoot, #ubelwntpiq tr, #ubelwntpiq td, #ubelwntpiq th {
+  border-style: none;
+}
+
+#ubelwntpiq p {
+  margin: 0;
+  padding: 0;
+}
+
+#ubelwntpiq .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#ubelwntpiq .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#ubelwntpiq .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#ubelwntpiq .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#ubelwntpiq .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ubelwntpiq .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ubelwntpiq .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#ubelwntpiq .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#ubelwntpiq .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#ubelwntpiq .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#ubelwntpiq .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#ubelwntpiq .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#ubelwntpiq .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#ubelwntpiq .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#ubelwntpiq .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#ubelwntpiq .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#ubelwntpiq .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#ubelwntpiq .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#ubelwntpiq .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ubelwntpiq .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#ubelwntpiq .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#ubelwntpiq .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#ubelwntpiq .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ubelwntpiq .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#ubelwntpiq .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#ubelwntpiq .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ubelwntpiq .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ubelwntpiq .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#ubelwntpiq .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ubelwntpiq .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#ubelwntpiq .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#ubelwntpiq .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ubelwntpiq .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ubelwntpiq .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#ubelwntpiq .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#ubelwntpiq .gt_left {
+  text-align: left;
+}
+
+#ubelwntpiq .gt_center {
+  text-align: center;
+}
+
+#ubelwntpiq .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#ubelwntpiq .gt_font_normal {
+  font-weight: normal;
+}
+
+#ubelwntpiq .gt_font_bold {
+  font-weight: bold;
+}
+
+#ubelwntpiq .gt_font_italic {
+  font-style: italic;
+}
+
+#ubelwntpiq .gt_super {
+  font-size: 65%;
+}
+
+#ubelwntpiq .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#ubelwntpiq .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#ubelwntpiq .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#ubelwntpiq .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#ubelwntpiq .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#ubelwntpiq .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#ubelwntpiq .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#ubelwntpiq .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#ubelwntpiq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<caption><strong>Tabel 1. Karakteristik Demografi dan Laboratorium Pasien Hipersensitivitas Berdasarkan Spektrum Hipersensitivitas.</strong></caption>
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="gt_col_headings header">
+<th id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Karakteristik Klinis</strong></th>
+<th id="stat_0" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Total Pasien</strong> (N = 106)<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+<th id="stat_1" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Reaksi_anafilaksis</strong><br>
+N = 40<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+<th id="stat_2" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Reaksi_hipersensitivitas</strong><br>
+N = 54<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+<th id="stat_3" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Syok_anafilaksis</strong><br>
+N = 12<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span></th>
+<th id="p.value" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>p-value</strong><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span></th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Usia (Tahun)</td>
+<td class="gt_row gt_center" headers="stat_0">33.00 (25.00, 51.00)</td>
+<td class="gt_row gt_center" headers="stat_1">31.00 (24.00, 47.00)</td>
+<td class="gt_row gt_center" headers="stat_2">36.00 (26.00, 53.00)</td>
+<td class="gt_row gt_center" headers="stat_3">43.00 (27.00, 62.00)</td>
+<td class="gt_row gt_center" headers="p.value">0.300</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Jenis Kelamin</td>
+<td class="gt_row gt_center" headers="stat_0"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_1"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_2"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_3"><br>
+</td>
+<td class="gt_row gt_center" headers="p.value">0.863</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-style: italic">&nbsp;&nbsp;&nbsp;&nbsp;L</td>
+<td class="gt_row gt_center" headers="stat_0">52 (49%)</td>
+<td class="gt_row gt_center" headers="stat_1">20 (50%)</td>
+<td class="gt_row gt_center" headers="stat_2">27 (50%)</td>
+<td class="gt_row gt_center" headers="stat_3">5 (42%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-style: italic">&nbsp;&nbsp;&nbsp;&nbsp;P</td>
+<td class="gt_row gt_center" headers="stat_0">54 (51%)</td>
+<td class="gt_row gt_center" headers="stat_1">20 (50%)</td>
+<td class="gt_row gt_center" headers="stat_2">27 (50%)</td>
+<td class="gt_row gt_center" headers="stat_3">7 (58%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Kelompok Pemicu</td>
+<td class="gt_row gt_center" headers="stat_0"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_1"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_2"><br>
+</td>
+<td class="gt_row gt_center" headers="stat_3"><br>
+</td>
+<td class="gt_row gt_center" headers="p.value">0.121</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-style: italic">&nbsp;&nbsp;&nbsp;&nbsp;Drugs</td>
+<td class="gt_row gt_center" headers="stat_0">67 (63%)</td>
+<td class="gt_row gt_center" headers="stat_1">21 (53%)</td>
+<td class="gt_row gt_center" headers="stat_2">37 (69%)</td>
+<td class="gt_row gt_center" headers="stat_3">9 (75%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-style: italic">&nbsp;&nbsp;&nbsp;&nbsp;Food</td>
+<td class="gt_row gt_center" headers="stat_0">28 (26%)</td>
+<td class="gt_row gt_center" headers="stat_1">16 (40%)</td>
+<td class="gt_row gt_center" headers="stat_2">11 (20%)</td>
+<td class="gt_row gt_center" headers="stat_3">1 (8.3%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-style: italic">&nbsp;&nbsp;&nbsp;&nbsp;Others</td>
+<td class="gt_row gt_center" headers="stat_0">11 (10%)</td>
+<td class="gt_row gt_center" headers="stat_1">3 (7.5%)</td>
+<td class="gt_row gt_center" headers="stat_2">6 (11%)</td>
+<td class="gt_row gt_center" headers="stat_3">2 (17%)</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Onset Reaksi (Jam)</td>
+<td class="gt_row gt_center" headers="stat_0">1.00 (0.50, 2.00)</td>
+<td class="gt_row gt_center" headers="stat_1">1.00 (0.50, 2.00)</td>
+<td class="gt_row gt_center" headers="stat_2">1.75 (1.00, 4.00)</td>
+<td class="gt_row gt_center" headers="stat_3">0.50 (0.38, 1.50)</td>
+<td class="gt_row gt_center" headers="p.value">0.011</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Leukosit (10^3/uL)</td>
+<td class="gt_row gt_center" headers="stat_0">10.12 (7.49, 13.76)</td>
+<td class="gt_row gt_center" headers="stat_1">10.78 (8.19, 14.08)</td>
+<td class="gt_row gt_center" headers="stat_2">9.53 (6.76, 13.01)</td>
+<td class="gt_row gt_center" headers="stat_3">10.92 (8.53, 15.05)</td>
+<td class="gt_row gt_center" headers="p.value">0.349</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Neutrofil (10^3/uL)</td>
+<td class="gt_row gt_center" headers="stat_0">7.38 (5.27, 10.36)</td>
+<td class="gt_row gt_center" headers="stat_1">7.68 (4.92, 11.61)</td>
+<td class="gt_row gt_center" headers="stat_2">7.13 (5.64, 10.32)</td>
+<td class="gt_row gt_center" headers="stat_3">7.07 (4.00, 9.05)</td>
+<td class="gt_row gt_center" headers="p.value">0.787</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">limfosit (10^3/uL)</td>
+<td class="gt_row gt_center" headers="stat_0">1.72 (0.94, 2.52)</td>
+<td class="gt_row gt_center" headers="stat_1">1.74 (1.19, 3.07)</td>
+<td class="gt_row gt_center" headers="stat_2">1.50 (0.72, 2.09)</td>
+<td class="gt_row gt_center" headers="stat_3">1.92 (1.43, 4.76)</td>
+<td class="gt_row gt_center" headers="p.value">0.032</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Monosit (10^3/uL)</td>
+<td class="gt_row gt_center" headers="stat_0">0.51 (0.33, 0.70)</td>
+<td class="gt_row gt_center" headers="stat_1">0.50 (0.30, 0.70)</td>
+<td class="gt_row gt_center" headers="stat_2">0.52 (0.36, 0.69)</td>
+<td class="gt_row gt_center" headers="stat_3">0.46 (0.14, 0.71)</td>
+<td class="gt_row gt_center" headers="p.value">0.590</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Eosinofil (%)</td>
+<td class="gt_row gt_center" headers="stat_0">0.09 (0.02, 0.22)</td>
+<td class="gt_row gt_center" headers="stat_1">0.08 (0.03, 0.18)</td>
+<td class="gt_row gt_center" headers="stat_2">0.07 (0.01, 0.17)</td>
+<td class="gt_row gt_center" headers="stat_3">0.18 (0.08, 0.30)</td>
+<td class="gt_row gt_center" headers="p.value">0.211</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Basofil (10^3/uL)</td>
+<td class="gt_row gt_center" headers="stat_0">0.02 (0.01, 0.04)</td>
+<td class="gt_row gt_center" headers="stat_1">0.02 (0.01, 0.04)</td>
+<td class="gt_row gt_center" headers="stat_2">0.02 (0.01, 0.04)</td>
+<td class="gt_row gt_center" headers="stat_3">0.03 (0.01, 0.05)</td>
+<td class="gt_row gt_center" headers="p.value">0.849</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Hemoglobin (g/dL)</td>
+<td class="gt_row gt_center" headers="stat_0">13.30 (12.00, 14.90)</td>
+<td class="gt_row gt_center" headers="stat_1">13.80 (12.70, 15.50)</td>
+<td class="gt_row gt_center" headers="stat_2">13.25 (11.90, 14.50)</td>
+<td class="gt_row gt_center" headers="stat_3">12.85 (11.15, 14.15)</td>
+<td class="gt_row gt_center" headers="p.value">0.075</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Trombosit (10^3/uL)</td>
+<td class="gt_row gt_center" headers="stat_0">279.50 (218.00, 341.00)</td>
+<td class="gt_row gt_center" headers="stat_1">281.50 (218.50, 350.00)</td>
+<td class="gt_row gt_center" headers="stat_2">269.00 (211.00, 341.00)</td>
+<td class="gt_row gt_center" headers="stat_3">283.00 (223.50, 299.50)</td>
+<td class="gt_row gt_center" headers="p.value">0.900</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Mean Platelet Volume</td>
+<td class="gt_row gt_center" headers="stat_0">9.50 (9.00, 10.10)</td>
+<td class="gt_row gt_center" headers="stat_1">9.45 (8.70, 10.15)</td>
+<td class="gt_row gt_center" headers="stat_2">9.50 (9.10, 10.10)</td>
+<td class="gt_row gt_center" headers="stat_3">9.65 (9.25, 10.40)</td>
+<td class="gt_row gt_center" headers="p.value">0.640</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Rasio Neutrofil per Limfosit (NLR)</td>
+<td class="gt_row gt_center" headers="stat_0">4.93 (2.41, 8.70)</td>
+<td class="gt_row gt_center" headers="stat_1">4.43 (1.93, 8.36)</td>
+<td class="gt_row gt_center" headers="stat_2">5.78 (3.16, 8.74)</td>
+<td class="gt_row gt_center" headers="stat_3">3.68 (1.23, 7.17)</td>
+<td class="gt_row gt_center" headers="p.value">0.125</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Rasio Monosit per Limfosit (MLR)</td>
+<td class="gt_row gt_center" headers="stat_0">0.29 (0.17, 0.51)</td>
+<td class="gt_row gt_center" headers="stat_1">0.24 (0.14, 0.39)</td>
+<td class="gt_row gt_center" headers="stat_2">0.36 (0.20, 0.65)</td>
+<td class="gt_row gt_center" headers="stat_3">0.14 (0.03, 0.44)</td>
+<td class="gt_row gt_center" headers="p.value">0.010</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Rasio Basofil per Limfosit (BLR)</td>
+<td class="gt_row gt_center" headers="stat_0">0.01 (0.01, 0.02)</td>
+<td class="gt_row gt_center" headers="stat_1">0.01 (0.01, 0.02)</td>
+<td class="gt_row gt_center" headers="stat_2">0.02 (0.01, 0.02)</td>
+<td class="gt_row gt_center" headers="stat_3">0.01 (0.00, 0.02)</td>
+<td class="gt_row gt_center" headers="p.value">0.117</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Rasio Eosinofil per Limfosit (ELR)</td>
+<td class="gt_row gt_center" headers="stat_0">0.04 (0.02, 0.15)</td>
+<td class="gt_row gt_center" headers="stat_1">0.04 (0.02, 0.15)</td>
+<td class="gt_row gt_center" headers="stat_2">0.04 (0.01, 0.14)</td>
+<td class="gt_row gt_center" headers="stat_3">0.09 (0.02, 0.19)</td>
+<td class="gt_row gt_center" headers="p.value">0.645</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Rasio Eosinofil per Neutrofil (ENR)</td>
+<td class="gt_row gt_center" headers="stat_0">0.01 (0.00, 0.03)</td>
+<td class="gt_row gt_center" headers="stat_1">0.02 (0.00, 0.04)</td>
+<td class="gt_row gt_center" headers="stat_2">0.01 (0.00, 0.03)</td>
+<td class="gt_row gt_center" headers="stat_3">0.02 (0.02, 0.03)</td>
+<td class="gt_row gt_center" headers="p.value">0.171</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Rasio Eosinofil per Monosit (EMR)</td>
+<td class="gt_row gt_center" headers="stat_0">0.18 (0.04, 0.37)</td>
+<td class="gt_row gt_center" headers="stat_1">0.20 (0.06, 0.34)</td>
+<td class="gt_row gt_center" headers="stat_2">0.12 (0.03, 0.37)</td>
+<td class="gt_row gt_center" headers="stat_3">0.31 (0.19, 5.94)</td>
+<td class="gt_row gt_center" headers="p.value">0.096</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Rasio Basofil per Eosinofil (BER)</td>
+<td class="gt_row gt_center" headers="stat_0">0.24 (0.10, 0.57)</td>
+<td class="gt_row gt_center" headers="stat_1">0.26 (0.08, 0.63)</td>
+<td class="gt_row gt_center" headers="stat_2">0.29 (0.12, 1.00)</td>
+<td class="gt_row gt_center" headers="stat_3">0.17 (0.04, 0.40)</td>
+<td class="gt_row gt_center" headers="p.value">0.147</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-style: italic">&nbsp;&nbsp;&nbsp;&nbsp;Data Tidak Tersedia</td>
+<td class="gt_row gt_center" headers="stat_0">4</td>
+<td class="gt_row gt_center" headers="stat_1">0</td>
+<td class="gt_row gt_center" headers="stat_2">3</td>
+<td class="gt_row gt_center" headers="stat_3">1</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Rasio Platelet per Limfosit (PLR)</td>
+<td class="gt_row gt_center" headers="stat_0">163.46 (114.55, 239.16)</td>
+<td class="gt_row gt_center" headers="stat_1">154.26 (97.76, 226.32)</td>
+<td class="gt_row gt_center" headers="stat_2">188.54 (128.96, 313.40)</td>
+<td class="gt_row gt_center" headers="stat_3">133.04 (67.89, 195.70)</td>
+<td class="gt_row gt_center" headers="p.value">0.035</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Rasio MPV per Platelet (MPR)</td>
+<td class="gt_row gt_center" headers="stat_0">0.03 (0.03, 0.05)</td>
+<td class="gt_row gt_center" headers="stat_1">0.03 (0.03, 0.05)</td>
+<td class="gt_row gt_center" headers="stat_2">0.03 (0.03, 0.05)</td>
+<td class="gt_row gt_center" headers="stat_3">0.04 (0.03, 0.05)</td>
+<td class="gt_row gt_center" headers="p.value">0.773</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Rasio MPV per Limfosit (MPVLR)</td>
+<td class="gt_row gt_center" headers="stat_0">5.63 (3.61, 10.86)</td>
+<td class="gt_row gt_center" headers="stat_1">5.07 (2.86, 8.78)</td>
+<td class="gt_row gt_center" headers="stat_2">6.69 (4.66, 13.61)</td>
+<td class="gt_row gt_center" headers="stat_3">4.62 (2.02, 7.35)</td>
+<td class="gt_row gt_center" headers="p.value">0.039</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Systemic Immune-Inflamation Index (SII)</td>
+<td class="gt_row gt_center" headers="stat_0">1,345.52 (604.70, 2,356.78)</td>
+<td class="gt_row gt_center" headers="stat_1">1,179.37 (537.57, 2,288.01)</td>
+<td class="gt_row gt_center" headers="stat_2">1,383.90 (934.12, 2,397.25)</td>
+<td class="gt_row gt_center" headers="stat_3">943.08 (441.14, 1,723.83)</td>
+<td class="gt_row gt_center" headers="p.value">0.200</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Systemic Inflammation Response Index (SIRI)</td>
+<td class="gt_row gt_center" headers="stat_0">2.19 (0.94, 4.57)</td>
+<td class="gt_row gt_center" headers="stat_1">1.54 (0.90, 4.13)</td>
+<td class="gt_row gt_center" headers="stat_2">2.71 (1.22, 4.57)</td>
+<td class="gt_row gt_center" headers="stat_3">1.05 (0.17, 4.05)</td>
+<td class="gt_row gt_center" headers="p.value">0.090</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Aggregate Index of Systemic Inflamation (AISI)</td>
+<td class="gt_row gt_center" headers="stat_0">540.96 (246.02, 1,120.79)</td>
+<td class="gt_row gt_center" headers="stat_1">410.69 (224.88, 1,114.63)</td>
+<td class="gt_row gt_center" headers="stat_2">692.82 (330.65, 1,266.36)</td>
+<td class="gt_row gt_center" headers="stat_3">309.95 (48.89, 1,010.14)</td>
+<td class="gt_row gt_center" headers="p.value">0.151</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="label" style="font-weight: bold">Rasio Hemoglobin per Platelet (HPR)</td>
+<td class="gt_row gt_center" headers="stat_0">0.05 (0.04, 0.06)</td>
+<td class="gt_row gt_center" headers="stat_1">0.05 (0.04, 0.07)</td>
+<td class="gt_row gt_center" headers="stat_2">0.05 (0.04, 0.06)</td>
+<td class="gt_row gt_center" headers="stat_3">0.05 (0.04, 0.05)</td>
+<td class="gt_row gt_center" headers="p.value">0.764</td>
+</tr>
+</tbody><tfoot>
+<tr class="gt_footnotes odd">
+<td colspan="6" class="gt_footnote"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> Median (Q1, Q3); n (%)</td>
+</tr>
+<tr class="gt_footnotes even">
+<td colspan="6" class="gt_footnote"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span> Kruskal-Wallis rank sum test; Pearson’s Chi-squared test; Fisher’s exact test</td>
+</tr>
+</tfoot>
+
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="usia" class="level3">
+<h3 class="anchored" data-anchor-id="usia">Usia</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data_clean <span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">Mean =</span> <span class="fu">mean</span>(Usia, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">SD =</span> <span class="fu">sd</span>(Usia, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Median =</span> <span class="fu">median</span>(Usia, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">Q1 =</span> <span class="fu">quantile</span>(Usia, <span class="fl">0.25</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">Q3 =</span> <span class="fu">quantile</span>(Usia, <span class="fl">0.75</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">Min =</span> <span class="fu">min</span>(Usia),</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">Max =</span> <span class="fu">max</span>(Usia),</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 7
+   Mean    SD Median    Q1    Q3   Min   Max
+  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1  38.8  16.5     33    25    51    18    82</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_clean, <span class="fu">aes</span>(<span class="at">x =</span> Usia)) <span class="sc">+</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Membuat histogram (y diatur sebagai densitas agar sejajar dengan kurva normal)</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span> <span class="fu">after_stat</span>(density)), <span class="at">bins =</span> <span class="dv">20</span>, <span class="at">fill =</span> <span class="st">"steelblue"</span>, <span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Membuat garis kurva dari data aktual</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"red"</span>, <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Menambahkan garis kurva normal ideal (putus-putus) sebagai pembanding</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_function</span>(</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">fun =</span> dnorm,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">args =</span> <span class="fu">list</span>(<span class="at">mean =</span> <span class="fu">mean</span>(data_clean<span class="sc">$</span>Usia, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">sd =</span> <span class="fu">sd</span>(data_clean<span class="sc">$</span>Usia, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)),</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">color =</span> <span class="st">"black"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>, <span class="at">linewidth =</span> <span class="dv">1</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Distribusi Nilai Usia dengan Kurva Normal"</span>,</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Usia"</span>, </span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Densitas"</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pencil_imun_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="melihat-distribusi" class="level3">
+<h3 class="anchored" data-anchor-id="melihat-distribusi">Melihat Distribusi</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Pilih variabel numerik yang ingin dianalisis (misal: lab darah)</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Anda bisa menambahkan atau mengurangi variabel di sini</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>variabel_lab <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Usia"</span>, <span class="st">"Onset_jam"</span>, <span class="st">"WBC"</span>, <span class="st">"Ne"</span>, <span class="st">"Ly"</span>, <span class="st">"Eo"</span>, <span class="st">"Ba"</span>, <span class="st">"HGB"</span>, <span class="st">"PLT"</span>, <span class="st">"MPV"</span>, <span class="st">"NLR"</span>, <span class="st">"MLR"</span>, <span class="st">"BLR"</span>, <span class="st">"ELR"</span>, <span class="st">"ENR"</span>, <span class="st">"EMR"</span>, <span class="st">"BER"</span>, <span class="st">"PLR"</span>, <span class="st">"MPR"</span>, <span class="st">"MPVLR"</span>, <span class="st">"SII"</span>, <span class="st">"SIRI"</span>, <span class="st">"AISI"</span>,<span class="st">"HPR"</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Transformasi data ke format 'long' agar ggplot bisa membaca banyak variabel</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>data_clean_long <span class="ot">&lt;-</span> data_clean <span class="sc">%&gt;%</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Alergy_Dx, <span class="fu">all_of</span>(variabel_lab)) <span class="sc">%&gt;%</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>Alergy_Dx, <span class="at">names_to =</span> <span class="st">"Parameter"</span>, <span class="at">values_to =</span> <span class="st">"Nilai"</span>)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Membuat Plot</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data_clean_long, <span class="fu">aes</span>(<span class="at">x =</span> Alergy_Dx, <span class="at">y =</span> Nilai, <span class="at">fill =</span> Alergy_Dx)) <span class="sc">+</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span>          <span class="co"># Bagian violin untuk melihat sebaran</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">width =</span> <span class="fl">0.2</span>, <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span> <span class="co"># Bagian boxplot untuk melihat median</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Parameter, <span class="at">scales =</span> <span class="st">"free_y"</span>) <span class="sc">+</span> <span class="co"># Pisahkan per parameter</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Distribusi Parameter Laboratorium Berdasarkan Gender"</span>,</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Visualisasi untuk menilai asumsi normalitas &amp; varians"</span>,</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Diagnosis Alergi"</span>,</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Nilai Parameter"</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 9 rows containing non-finite outside the scale range
+(`stat_ydensity()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 9 rows containing non-finite outside the scale range
+(`stat_boxplot()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="pencil_imun_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
 </div>
 </div>

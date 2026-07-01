@@ -17,25 +17,66 @@ library(googlesheets4)
 library(skimr)
 library(gtsummary)
 library(skimr)
+library(flextable)
+library(car)
+library(broom)
 ```
 
 ## Import Data
 
 ```{r}
-data_awal <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/11i1_hS6h00tasrYxlCTuPvGgTHqWb9de-eD8HLjLcQI/edit?gid=11410341#gid=11410341", sheet = 1)
+#| label: load_data
+#| eval: false
+#| include: false
+data_awal <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/11i1_hS6h00tasrYxlCTuPvGgTHqWb9de-eD8HLjLcQI/edit?gid=11410341#gid=11410341", sheet = 1, col_types = "c")
+
+data_awal <- write_csv(data_awal, "data_awal.csv")
 ```
 
 ### Seleksi Data
 
 ```{r}
+#| label: Data selection
+#| include: false
+data_awal <- read_csv("data_awal.csv")
 data_clean <- data_awal %>%
   filter(inc_exc == "Include") %>%
-  mutate(across(19:26, as.numeric)) %>%
+  mutate(across(20:30, as.numeric)) %>%
   mutate(Gender = as.factor(Gender)) %>%
   mutate(MR = as.character(MR)) %>%
   mutate(Onset_jam = as.numeric(Onset_jam)) %>%
-  mutate(Usia = as.numeric(Usia))
+  mutate(Usia = as.numeric(Usia)) %>%
+  mutate(Skin = map_chr(Skin, toString)) %>%
+  mutate(across(c(5,9,10,15,16,17,18,19), as.factor))
   
+data_clean <- data_clean %>%
+  mutate(
+    # 1. Rasio Berbasis Leukosit
+    NLR = Ne / Ly,
+    MLR = Mo / Ly,
+    BLR = Ba / Ly,
+    ELR = Eo / Ly,
+    ENR = Eo / Ne,
+    
+    # 2. Tambahan: Rasio Spesifik Seluler
+    EMR = Eo / Mo,
+    BER = Ba / Eo,
+    
+    # 3. Rasio Berbasis Trombosit
+    PLR = PLT / Ly,
+    MPR = MPV / PLT,
+    MPVLR = MPV / Ly,
+    
+    # 3. Indeks Inflamasi Sistemik Komposit
+    SII = (PLT * Ne) / Ly,
+    SIRI = (Ne * Mo) / Ly,
+    
+    # Tambahan: Aggregate Index of Systemic Inflammation
+    AISI = (Ne * PLT * Mo) / Ly,
+    
+    # --- 4. Rasio Berbasis Hemoglobin ---
+    HPR = HGB / PLT
+  )
 
 glimpse(data_clean)
 ```
@@ -43,8 +84,172 @@ glimpse(data_clean)
 ### Descritive Statistics
 
 ```{r}
+#| label: Descriptive
+#| echo: false
 skim(data_clean)
 
 ## TBL Summary without No, Nama, MR, skin and IgE
 data_clean[, -c(1,2,3,6,7)] %>% tbl_summary
+```
+
+```{r}
+# 3. Membuat Tabel Karakteristik (Tabel 1)
+tabel_publikasi <- data_clean %>%
+  # Memilih variabel klinis dan lab yang relevan untuk naskah publikasi
+  # Pastikan membuang kolom yang kosong (Skin, IgE) dan identitas pasien
+  select(Usia, Gender, Grp_inducer, Alergy_Dx, Onset_jam, WBC, Ne, Ly, Mo, Eo, Ba, HGB, PLT, MPV, NLR, MLR, BLR, ELR, ENR, EMR, BER, PLR, MPR, MPVLR, SII, SIRI, AISI, HPR) %>%
+  
+  # Membangun tabel dasar gtsummary
+  tbl_summary(
+    by = Alergy_Dx, # Memisahkan kolom berdasarkan Gender (Laki-laki vs Perempuan)
+    
+    # Menyesuaikan format pelaporan angka
+    statistic = list(
+      all_continuous() ~ "{median} ({p25}, {p75})", # Format Median (IQR) untuk numerik
+      all_categorical() ~ "{n} ({p}%)"             # Format n (%) untuk kategori
+    ),
+    
+    # Mengatur jumlah angka di belakang koma
+    digits = all_continuous() ~ 2,
+    
+    # Mengubah teks NA/Missing value agar lebih formal
+    missing_text = "Data Tidak Tersedia",
+    
+    # Merapikan nama label agar sesuai dengan terminologi medis standar
+    label = list(
+      Usia ~ "Usia (Tahun)",
+      Gender ~ "Jenis Kelamin",
+      Grp_inducer ~ "Kelompok Pemicu",
+      Onset_jam ~ "Onset Reaksi (Jam)",
+      WBC ~ "Leukosit (10^3/uL)",
+      Ne ~ "Neutrofil (10^3/uL)",
+      Ly ~ "limfosit (10^3/uL)",
+      Mo ~ "Monosit (10^3/uL)",
+      Eo ~ "Eosinofil (%)",
+      Ba ~ "Basofil (10^3/uL)",
+      HGB ~ "Hemoglobin (g/dL)",
+      PLT ~ "Trombosit (10^3/uL)",
+      MPV ~ "Mean Platelet Volume",
+      NLR ~ "Rasio Neutrofil per Limfosit (NLR)",
+      MLR ~ "Rasio Monosit per Limfosit (MLR)",
+      BLR ~ "Rasio Basofil per Limfosit (BLR)",
+      ELR ~ "Rasio Eosinofil per Limfosit (ELR)",
+      ENR ~ "Rasio Eosinofil per Neutrofil (ENR)",
+      EMR ~ "Rasio Eosinofil per Monosit (EMR)",
+      BER ~ "Rasio Basofil per Eosinofil (BER)",
+      PLR ~ "Rasio Platelet per Limfosit (PLR)",
+      MPR ~ "Rasio MPV per Platelet (MPR)",
+      MPVLR ~ "Rasio MPV per Limfosit (MPVLR)",
+      SII ~ "Systemic Immune-Inflamation Index (SII)",
+      SIRI ~ "Systemic Inflammation Response Index (SIRI)",
+      AISI ~ "Aggregate Index of Systemic Inflamation (AISI)",
+      HPR ~ "Rasio Hemoglobin per Platelet (HPR)"
+    )
+  ) %>%
+  
+  # Menambahkan kolom Total Keseluruhan
+  add_overall(col_label = "**Total Pasien** \n(N = {N})") %>%
+  
+  # Menambahkan Uji Statistik (p-value otomatis membedakan parametrik/non-parametrik)
+  add_p(pvalue_fun = ~style_pvalue(.x, digits = 3)) %>% 
+  
+  # Estetika tipografi untuk standar jurnal (Bold & Italic)
+  bold_labels() %>%
+  italicize_levels() %>%
+  
+  # Modifikasi Header dan Judul Tabel
+  modify_header(label = "**Karakteristik Klinis**") %>%
+  modify_caption("**Tabel 1. Karakteristik Demografi dan Laboratorium Pasien Hipersensitivitas Berdasarkan Spektrum Hipersensitivitas.**")
+
+# Menampilkan hasil di Viewer RStudio
+tabel_publikasi
+```
+
+### Usia
+
+```{r}
+data_clean %>%
+  summarise(
+    Mean = mean(Usia, na.rm = TRUE),
+    SD = sd(Usia, na.rm = TRUE),
+    Median = median(Usia, na.rm = TRUE),
+    Q1 = quantile(Usia, 0.25, na.rm = TRUE),
+    Q3 = quantile(Usia, 0.75, na.rm = TRUE),
+    Min = min(Usia),
+    Max = max(Usia),
+  )
+
+ggplot(data_clean, aes(x = Usia)) +
+  # Membuat histogram (y diatur sebagai densitas agar sejajar dengan kurva normal)
+  geom_histogram(aes(y = after_stat(density)), bins = 20, fill = "steelblue", alpha = 0.6) +
+  
+  # Membuat garis kurva dari data aktual
+  geom_density(color = "red", linewidth = 1) +
+  
+  # Menambahkan garis kurva normal ideal (putus-putus) sebagai pembanding
+  stat_function(
+    fun = dnorm,
+    args = list(mean = mean(data_clean$Usia, na.rm = TRUE), sd = sd(data_clean$Usia, na.rm = TRUE)),
+    color = "black", linetype = "dashed", linewidth = 1
+  ) +
+  labs(
+    title = "Distribusi Nilai Usia dengan Kurva Normal",
+    x = "Usia", 
+    y = "Densitas"
+  ) +
+  theme_minimal()
+```
+
+### Melihat Distribusi
+
+```{r}
+library(tidyverse)
+
+# 1. Pilih variabel numerik yang ingin dianalisis (misal: lab darah)
+# Anda bisa menambahkan atau mengurangi variabel di sini
+variabel_lab <- c("Usia", "Onset_jam", "WBC", "Ne", "Ly", "Eo", "Ba", "HGB", "PLT", "MPV", "NLR", "MLR", "BLR", "ELR", "ENR","BER", "EMR", "PLR", "MPR", "MPVLR", "SII", "SIRI", "AISI","HPR")
+
+variabel_proses <- c("Usia", "Onset_jam", "WBC", "Ne", "Ly", "Eo", "Ba", "HGB", "PLT", "MPV", "NLR", "MLR", "BLR", "ELR", "ENR", "EMR", "PLR", "MPR", "MPVLR", "SII", "SIRI", "AISI","HPR")
+
+# 2. Membuat Dataframe untuk Label Statistik
+# Kita loop setiap variabel untuk menghitung p-value
+stats_labels <- map_dfr(variabel_proses, function(var) {
+  
+  # Shapiro-Wilk (untuk keseluruhan data)
+  p_shap <- shapiro.test(data_clean[[var]])$p.value
+  
+  # Levene Test (berdasarkan Gender)
+  f <- as.formula(paste(var, "~ Alergy_Dx"))
+  p_lev <- leveneTest(f, data = data_clean)$`Pr(>F)`[1]
+  
+  # Membuat string label
+  label_text <- paste0("Shapiro p: ", round(p_shap, 3), 
+                       "\nLevene p: ", round(p_lev, 3))
+  
+  return(data.frame(Parameter = var, label = label_text))
+})
+
+# 4. Transformasi data ke format 'long' agar ggplot bisa membaca banyak variabel
+data_clean_long <- data_clean %>%
+  select(Alergy_Dx, all_of(variabel_lab)) %>%
+  pivot_longer(cols = -Alergy_Dx, names_to = "Parameter", values_to = "Nilai")
+
+# 5. Membuat Plot
+Distribusi_violin <- ggplot(data_clean_long, aes(x = Alergy_Dx, y = Nilai, fill = Alergy_Dx)) +
+  geom_violin(alpha = 0.5) +          # Bagian violin untuk melihat sebaran
+  geom_boxplot(width = 0.2, alpha = 0.8) + # Bagian boxplot untuk melihat median
+  geom_text(data = stats_labels, 
+            aes(x = 1.5, y = Inf, label = label), # x=1.5 (tengah), y=Inf (paling atas)
+            vjust = 1.5, size = 3, color = "black", inherit.aes = FALSE) +
+  facet_wrap(~Parameter, scales = "free_y") + # Pisahkan per parameter
+  theme_minimal() +
+  labs(
+    title = "Distribusi Parameter Laboratorium Berdasarkan Gender",
+    subtitle = "Visualisasi untuk menilai asumsi normalitas & varians",
+    x = "Diagnosis Alergi",
+    y = "Nilai Parameter"
+  ) +
+  theme(legend.position = "none")
+
+Distribusi_violin
 ```
