@@ -103,6 +103,9 @@ tabel_publikasi <- data_clean %>%
   tbl_summary(
     by = Alergy_Dx, # Memisahkan kolom berdasarkan Gender (Laki-laki vs Perempuan)
     
+    # Memaksa gtsummary membaca semua kolom berformat angka sebagai kontinu
+    type = list(where(is.numeric) ~ "continuous"),
+    
     # Menyesuaikan format pelaporan angka
     statistic = list(
       all_continuous() ~ "{median} ({p25}, {p75})", # Format Median (IQR) untuk numerik
