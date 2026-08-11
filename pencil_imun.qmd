@@ -508,6 +508,6 @@ print(roc_plot)
 ggsave("Kurva_ROC_MLR_Dual_0438_0172.tiff", 
        plot = roc_plot, 
        width = 6.5, height = 6, units = "in", 
-       dpi = 300, compression = "lzw")
+       dpi = 600, compression = "lzw")
 ```
 
