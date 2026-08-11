@@ -20,6 +20,7 @@ library(skimr)
 library(flextable)
 library(car)
 library(broom)
+library(pROC)
 ```
 
 ## Import Data
@@ -168,6 +169,12 @@ tabel_publikasi <- data_clean %>%
 tabel_publikasi
 ```
 
+```{r}
+tabel_lengkap <- as_flex_table(tabel_publikasi)
+save_as_docx(tabel_lengkap, path = "tabel_lengkap.docx")
+```
+
+
 ### Usia
 
 ```{r}
@@ -256,3 +263,251 @@ Distribusi_violin <- ggplot(data_clean_long, aes(x = Alergy_Dx, y = Nilai, fill 
 
 Distribusi_violin
 ```
+```{r}
+# ---------------------------------------------------------
+# LANGKAH 1: Persiapan Data (Binarisasi Outcome)
+# ---------------------------------------------------------
+# Kurva ROC membutuhkan variabel dependen (Y) yang bersifat biner (0 dan 1).
+# Kita jadikan Hipersensitivitas = 0 (Kontrol), Anafilaksis & Syok = 1 (Kasus)
+
+data_roc <- data_clean %>%
+  mutate(
+    # Buat kolom baru bernama 'keparahan_biner'
+    keparahan_biner = ifelse(Alergy_Dx == "Reaksi_hipersensitivitas", 0, 1)
+  )
+
+# LANGKAH 2: Menjalankan Analisis ROC
+# ---------------------------------------------------------
+# Catatan: Karena MLR semakin RENDAH pada kasus yang BERAT, 
+# pROC secara otomatis akan mendeteksi arah ini (direction = ">").
+
+roc_mlr <- roc(response = data_roc$keparahan_biner, 
+               predictor = data_roc$MLR)
+
+
+# LANGKAH 3: Melihat Hasil AUC dan Confidence Interval
+# ---------------------------------------------------------
+print("=== NILAI AREA UNDER THE CURVE (AUC) ===")
+print(roc_mlr)
+print(ci.auc(roc_mlr)) # Menampilkan 95% Confidence Interval untuk AUC
+
+
+# LANGKAH 4: Mencari Cut-off Optimal (Youden Index)
+# ---------------------------------------------------------
+# Youden Index akan mencari titik yang memaksimalkan Sensitivitas + Spesifisitas
+best_cutoff <- coords(roc_mlr, 
+                      x = "best", 
+                      best.method = "youden",
+                      ret = c("threshold", "specificity", "sensitivity", "accuracy"))
+
+print("=== NILAI CUT-OFF OPTIMAL MLR ===")
+print(best_cutoff)
+
+# LANGKAH 5: Membuat Visualisasi Kurva ROC Siap Publikasi
+# ---------------------------------------------------------
+# Plot ini bisa langsung diekspor untuk naskah jurnal (Resolusi tinggi)
+plot(roc_mlr,
+     main = "Kurva ROC: Nilai MLR sebagai Prediktor Anafilaksis",
+     col = "#2c3e50",          # Warna garis (biru gelap)
+     lwd = 3,                  # Ketebalan garis
+     legacy.axes = TRUE,       # Sumbu X menampilkan "1 - Specificity" (FPR)
+     print.auc = TRUE,         # Mencetak nilai AUC langsung di grafik
+     print.auc.y = 0.3,        # Posisi teks AUC
+     print.thres = "best",     # Menandai titik cut-off terbaik di grafik
+     print.thres.pch = 19,     # Bentuk titik cut-off (bulat solid)
+     print.thres.col = "red",  # Warna titik cut-off
+     print.thres.cex = 1.2)    # Ukuran teks cut-off
+```
+
+```{r}
+# 1. Ekstrak Data untuk Anotasi
+# ---------------------------------------------------------
+# Mengambil nilai AUC dan 95% Confidence Interval
+auc_val <- round(auc(roc_mlr), 3)
+ci_val <- ci(roc_mlr)
+ci_low <- round(ci_val[1], 3)
+ci_high <- round(ci_val[3], 3)
+
+# Mengambil titik cut-off terbaik (Youden Index) untuk Opsi Spesifisitas Tinggi
+# (Rekomendasi cut-off <= 0.172 yang sejalan dengan median syok)
+best_coords <- coords(roc_mlr, x = 0.1721377, input = "threshold",
+                      ret = c("threshold", "specificity", "sensitivity"))
+
+# 2. Membuat Kurva dengan ggplot2 (ggroc)
+# ---------------------------------------------------------
+roc_plot <- ggroc(roc_mlr, 
+                  colour = "#4e79a7", # Warna biru kalem khas jurnal (Tableau palette)
+                  linewidth = 1.2) +  # Menggunakan linewidth pengganti size untuk garis
+  
+  # Garis referensi diagonal (warna abu-abu kalem)
+  geom_abline(intercept = 1, slope = 1, linetype = "dashed", color = "#AAB7B8", linewidth = 0.8) +
+  
+  # Titik poin untuk nilai cut-off optimal
+  geom_point(aes(x = best_coords$specificity, y = best_coords$sensitivity),
+             color = "#e15759", # Merah bata/kalem 
+             size = 3.5, shape = 21, fill = "white", stroke = 1.5) +
+  
+  # Teks anotasi untuk Cut-off
+  annotate("text", 
+           x = best_coords$specificity - 0.08, # Menggeser posisi teks agar tidak menabrak garis
+           y = best_coords$sensitivity + 0.05,
+           label = paste0("Cut-off \u2264 ", round(best_coords$threshold, 3)),
+           size = 4.5, color = "#c13b3e", fontface = "bold.italic") +
+  
+  # Teks anotasi untuk AUC & 95% CI (diletakkan di area kanan bawah)
+  annotate("text", 
+           x = 0.35, y = 0.15,
+           label = paste0("AUC = ", auc_val, "\n95% CI (", ci_low, " - ", ci_high, ")"),
+           size = 5, fontface = "bold", color = "#2C3E50") +
+  
+  # ---------------------------------------------------------
+  # 3. Kustomisasi Tema (Estetika Minimalis & Elegan)
+  # ---------------------------------------------------------
+  theme_classic(base_size = 14) + # Tema bersih tanpa background abu-abu
+  labs(
+    x = "Spesifisitas",
+    y = "Sensitivitas"
+  ) +
+  theme(
+    axis.title.x = element_text(face = "bold", color = "#34495E", margin = margin(t = 10)),
+    axis.title.y = element_text(face = "bold", color = "#34495E", margin = margin(r = 10)),
+    axis.text = element_text(color = "#566573"),
+    axis.line = element_line(color = "#BDC3C7", linewidth = 0.8),
+    panel.grid.major = element_line(color = "#F2F3F4", linetype = "dotted"), # Grid tipis
+    plot.margin = margin(20, 20, 20, 20)
+  ) +
+  # Membalik sumbu X dari 1.0 ke 0.0 (Standar baku kurva ROC kedokteran)
+  scale_x_reverse(limits = c(1, 0), breaks = seq(1, 0, by = -0.2)) +
+  scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, by = 0.2))
+
+# Tampilkan Plot
+print(roc_plot)
+
+# ---------------------------------------------------------
+# 4. Ekspor Gambar Resolusi Tinggi (300 DPI) untuk Jurnal
+# ---------------------------------------------------------
+# Ganti path folder sesuai dengan komputer Anda
+ggsave("Kurva_ROC_MLR_Estetik.tiff", 
+       plot = roc_plot, 
+       width = 6, height = 6, units = "in", 
+       dpi = 300, 
+       compression = "lzw")
+```
+
+```{r}
+# Pastikan library sudah dimuat
+library(pROC)
+library(ggplot2)
+
+# Asumsi: Objek 'roc_mlr' sudah dibuat sebelumnya dari fungsi roc()
+# roc_mlr <- roc(response = data_roc$keparahan_biner, predictor = data_roc$MLR)
+
+# ---------------------------------------------------------
+# 1. Ekstrak Titik Cut-off dari Hasil pROC
+# ---------------------------------------------------------
+# Opsi 1: Cut-off Skrining (Sensitivitas Tinggi) -> MLR <= 0.438
+c_sens <- coords(roc_mlr, x = 0.4387298, input = "threshold",
+                 ret = c("threshold", "specificity", "sensitivity"))
+
+# Opsi 2: Cut-off Konfirmasi Syok (Spesifisitas Tinggi) -> MLR <= 0.172
+c_spec <- coords(roc_mlr, x = 0.1721377, input = "threshold",
+                 ret = c("threshold", "specificity", "sensitivity"))
+
+# Buat dataframe khusus titik penanda untuk memicu Legend otomatis
+df_cutoffs <- data.frame(
+  Kategori = c("Skrining (Sensitivitas Tinggi)", "Konfirmasi (Spesifisitas Tinggi)"),
+  Threshold = c(c_sens$threshold, c_spec$threshold),
+  Specificity = c(c_sens$specificity, c_spec$specificity),
+  Sensitivity = c(c_sens$sensitivity, c_spec$sensitivity)
+)
+
+# ---------------------------------------------------------
+# 2. Ekstrak Nilai AUC dan 95% CI
+# ---------------------------------------------------------
+auc_val <- round(auc(roc_mlr), 3)
+ci_val <- ci(roc_mlr)
+ci_text <- paste0("AUC = ", auc_val, "\n95% CI: ", round(ci_val[1], 3), " - ", round(ci_val[3], 3))
+
+# ---------------------------------------------------------
+# 3. Plot Kurva ROC Estetik dengan Dual Anotasi & Legend
+# ---------------------------------------------------------
+roc_plot <- ggroc(roc_mlr, colour = "#4e79a7", linewidth = 1.2) +
+  
+  # Garis referensi diagonal (menebak 50% / kebetulan)
+  geom_abline(intercept = 1, slope = 1, linetype = "dashed", color = "#AAB7B8", linewidth = 0.8) +
+  
+  # Titik Penanda Cut-off (Memicu Legend di ggplot)
+  geom_point(data = df_cutoffs, 
+             aes(x = Specificity, y = Sensitivity, fill = Kategori, shape = Kategori),
+             size = 4, stroke = 1.1, color = "#2C3E50") +
+  
+  # --- Anotasi Teks 1: Cut-off Skrining (MLR <= 0.438) ---
+  # Posisi x dikurangi (geser kanan di grafik terbalik) agar label terbaca jelas
+  annotate("text", 
+           x = df_cutoffs$Specificity[1] + 0.1, 
+           y = df_cutoffs$Sensitivity[1] + 0.12,
+           label = paste0("MLR \u2264 ", round(df_cutoffs$Threshold[1], 3), 
+                          "\nSens: ", round(df_cutoffs$Sensitivity[1]*100, 1), 
+                          "%\nSpes: ", round(df_cutoffs$Specificity[1]*100, 1), "%"),
+           size = 3.6, color = "#f28e2b", fontface = "bold", hjust = 0) +
+  
+  # --- Anotasi Teks 2: Cut-off Konfirmasi Syok (MLR <= 0.172) ---
+  # Posisi x ditambah (geser kiri di grafik terbalik) 
+  annotate("text", 
+           x = df_cutoffs$Specificity[2] - 0.075, 
+           y = df_cutoffs$Sensitivity[2] + 0.12,
+           label = paste0("MLR \u2264 ", round(df_cutoffs$Threshold[2], 3), 
+                          "\nSens: ", round(df_cutoffs$Sensitivity[2]*100, 1), 
+                          "%\nSpes: ", round(df_cutoffs$Specificity[2]*100, 1), "%"),
+           size = 3.6, color = "#e15759", fontface = "bold", hjust = 1) +
+
+  # --- Anotasi Teks 3: AUC & CI ---
+  # Diletakkan di tengah bawah grafik
+  annotate("text", x = 0.27, y = 0.06, label = ci_text, size = 4.5, fontface = "bold", color = "#2C3E50") +
+  
+  # Kustomisasi Bentuk & Warna Titik Legend
+  scale_fill_manual(values = c("Skrining (Sensitivitas Tinggi)" = "#f28e2b", # Oranye
+                               "Konfirmasi (Spesifisitas Tinggi)" = "#e15759")) + # Merah
+  scale_shape_manual(values = c("Skrining (Sensitivitas Tinggi)" = 21,  # Lingkaran
+                                "Konfirmasi (Spesifisitas Tinggi)" = 24)) + # Segitiga
+  
+  # Pengaturan Sumbu Terbalik (Spesifisitas 1.0 ke 0.0)
+  scale_x_reverse(limits = c(1.05, -0.05), breaks = seq(1, 0, by = -0.2)) +
+  scale_y_continuous(limits = c(-0.05, 1.05), breaks = seq(0, 1, by = 0.2)) +
+  
+  # Tema Kebersihan & Tata Letak
+  theme_classic(base_size = 13) +
+  labs(
+    x = "Spesifisitas",
+    y = "Sensitivitas",
+    fill = "Ambang Batas (Cut-off):",
+    shape = "Ambang Batas (Cut-off):"
+  ) +
+  theme(
+    axis.title.x = element_text(face = "bold", color = "#34495E", margin = margin(t = 10)),
+    axis.title.y = element_text(face = "bold", color = "#34495E", margin = margin(r = 10)),
+    axis.text = element_text(color = "#566573"),
+    axis.line = element_line(color = "#BDC3C7", linewidth = 0.8),
+    panel.grid.major = element_line(color = "#F2F3F4", linetype = "dotted"),
+    
+    # Pengaturan Posisi dan Desain Kotak Legend di Area Kosong
+    legend.position = c(0.7, 0.35),
+    legend.background = element_rect(fill = alpha("white", 0.9), color = "#BDC3C7", linewidth = 0.5),
+    legend.title = element_text(size = 10, face = "bold", color = "#2C3E50"),
+    legend.text = element_text(size = 9, color = "#34495E"),
+    legend.margin = margin(6, 8, 6, 8),
+    plot.margin = margin(15, 15, 15, 15)
+  )
+
+# Tampilkan Plot
+print(roc_plot)
+
+# ---------------------------------------------------------
+# 4. Simpan Gambar ke Format TIFF 300 DPI
+# ---------------------------------------------------------
+ggsave("Kurva_ROC_MLR_Dual_0438_0172.tiff", 
+       plot = roc_plot, 
+       width = 6.5, height = 6, units = "in", 
+       dpi = 300, compression = "lzw")
+```
+
